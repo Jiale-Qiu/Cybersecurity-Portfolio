@@ -1,7 +1,5 @@
 # Cybersecurity-Portfolio
-*Note: If you want to view something more skimmable, head over to my personal blog: https://c1eb.webflow.io*
-
-Hello! My name is Jiale (Caleb) Qiu. Here, I document every CTF I complete and my entire cybersecurity journey in greater detail than in my blog.
+Hello! My name is Jiale (Caleb) Qiu. Here, I document every CTF I complete and my entire cybersecurity journey.
 
 To see the red team CTFs I've done, check out `Red Team > Capture the Flags`
 To see the blue team CTFs I've done, check out `Blue Team > Capture the Flags`
