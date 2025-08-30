@@ -3,4 +3,5 @@
 
 Hello! My name is Jiale (Caleb) Qiu. Here, I document every CTF I complete and my entire cybersecurity journey in greater detail than in my blog.
 
-To see the red team CTFs I've done, check out `Red Team > Capture The Flag`
+To see the red team CTFs I've done, check out `Red Team > Capture the Flags`
+To see the blue team CTFs I've done, check out `Blue Team > Capture the Flags`
