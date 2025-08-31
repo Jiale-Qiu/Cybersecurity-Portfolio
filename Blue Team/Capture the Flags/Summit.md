@@ -4,7 +4,7 @@
 **Platform:** TryHackMe, [https://tryhackme.com/room/summit]\
 **Skills and Tools Used:** Pyramid of Pain, Detection Engineering (Challenge's built-in security tools)
 
-## Briefing
+## Preface
 
 This CTF is my first defensive CTF. The goal of this CTF is to chase an adversary up the Pyramid of Pain. This means forcing them to waste money, resources, and time whilst attempting to achieve their goals. This will hopefully cause them to back off, as the resources wasted outweigh the benefits of their goals. 
 
