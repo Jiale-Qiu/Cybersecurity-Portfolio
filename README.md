@@ -1,5 +1,6 @@
 # Cybersecurity-Portfolio
-Hello! My name is Jiale (Caleb) Qiu. Here, I document every CTF I complete and my entire cybersecurity journey.
+Hello! My name is Jiale (Caleb) Qiu. Here, I document every CTF I complete and my entire cybersecurity journey, including:
+> Capture The Flag challenges I complete
+> More coming soon, I still have to populate this repo with stuff
 
-To see the red team CTFs I've done, check out `Red Team > Capture the Flags`
-To see the blue team CTFs I've done, check out `Blue Team > Capture the Flags`
+You can find the CTFs I have completed in `(Red/Blue) Team > Capture the Flags`
