@@ -1,4 +1,4 @@
 # Homelab Progress Check 1: Preplanning
-09/07/2025 (MMDDYYYY)
+09/07/2025
 
 Before starting everything, I define clear objectives and constraints. This preplanning can be found in the README.
