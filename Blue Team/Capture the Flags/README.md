@@ -1,0 +1,1 @@
+Note that not all challenges and CTFs here will be extensively documented. There will be a seperate folder for well documented CTFs I've done.
