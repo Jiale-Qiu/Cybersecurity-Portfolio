@@ -1,5 +1,5 @@
-**Completion date**: 10/29/2025\
-**Platform:** TryHackMe, [https://tryhackme.com/room/paymentcollectors]\
+**Completion date**: 10/30/2025\
+**Platform:** TryHackMe, [https://tryhackme.com/room/typosquatters]\
 **Skills and Tools Used:** Elastic, Threat Hunting
 
 ## Overview
