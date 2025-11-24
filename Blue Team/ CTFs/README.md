@@ -1,1 +1,1 @@
-This is a collection of all defensive challenges I've done. If you want to see the rest of the CTFs I completed, check out the Other CTFs folder. Please note that these will have less documentation in them.
+This is a collection of defensive CTFs I've done. My high quality CTF documentation will be in this directory, whilst the less documented ones are inside the "Other CTFs" folder.
