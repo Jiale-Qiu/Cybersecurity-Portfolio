@@ -9,5 +9,5 @@ Here, you can find things such as: (click to view!)
 - [TryHackMe SOC Simulator & Threat Hunting Simulator Performance](./Blue%20Team/THM%20SOC%20%26%20Threat%20Hunting%20Simulator)
 
 ## Contacts
-TryHackMe Profile: https://tryhackme.com/p/c1eb
+TryHackMe Profile: https://tryhackme.com/p/c1eb  
 Discord Username: c1eb_13
