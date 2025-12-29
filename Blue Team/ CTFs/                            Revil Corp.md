@@ -1,4 +1,4 @@
-**Completion date**: 2025-12-21
+**Completion date**: 2025-12-29
 **Platform:** TryHackMe, [https://tryhackme.com/room/revilcorp]\
 **Skills and Tools Used:** Redline
 
