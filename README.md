@@ -1,5 +1,5 @@
 # Cybersecurity-Portfolio
-Hello! My name is Jiale Qiu. I prefer to be called Caleb though.
+Hello! My name is Jiale Qiu.
 I created this repository to document my progress in my cybersecurity learning. It is a great place to reference my growth and what I have been doing.
 
 ## What to find here
