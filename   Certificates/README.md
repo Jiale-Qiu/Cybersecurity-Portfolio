@@ -6,11 +6,11 @@ Certificates to affirm my learning.
 
 The SOC Level 2 learning path on TryHackMe goes in-depth into specializations of defensive work, focusing more on skills found in a tier 2 security analyst. This learning path delves into a variety of topics, such as:
 - log analysis
-- advanced SIEM usage in both Splunk and Elastic (ELK). 
-- basic detection engineering
-- threat hunting and emulation
+- advanced SIEM usage in both Splunk and Elastic (ELK)
+- basic detection engineering using Sigma rules
+- threat hunting and emulation via Atomic Red Team and CALDERA
 - basic incident response
-- malware analysis
+- malware analysis, including basic and dynamic with Ghidra, PEStudio, and default Linux Tools such as the `strings` commmand
 
 <img src="./img/soc2.jpg" width="30%" />
 
