@@ -4,6 +4,14 @@ Certificates to affirm my learning.
 ## Tryhackme SOC Level 2 Learning path
 - (https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-ITZJXOA09E.pdf)
 
+The SOC Level 2 learning path on TryHackMe goes in-depth into specializations of defensive work, focusing more on skills found in a tier 2 security analyst. This learning path delves into a variety of topics, such as:
+- log analysis
+- advanced SIEM usage in both Splunk and Elastic (ELK). 
+- basic detection engineering
+- threat hunting and emulation
+- basic incident response
+- malware analysis
+
 <img src="./img/soc2.jpg" width="30%" />
 
 ## Tryhackme SOC Level 1 Learning path
