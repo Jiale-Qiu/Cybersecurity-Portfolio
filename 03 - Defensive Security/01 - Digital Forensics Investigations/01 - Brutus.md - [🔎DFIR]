@@ -1,8 +1,11 @@
 **Completion date:** 2026-05-11\
-**Platform:** TryHackMe, [https://app.hackthebox.com/sherlocks/Brutus]\
+**Platform:** HackTheBox, [https://app.hackthebox.com/sherlocks/Brutus]\
 **Skills and Tools Used:** Built-in linux tools, python
 
 ## Overview
+Post-Investigation Report:\
+The attacker, `[REDACTED IP]`, carried out a brute force attack to gain access to the `[REDACTED]` account and established a terminal session on `[REDACTED TIME] UTC`. Afterwards, the attacker gained persistence by creating a new user account under the name `[REDACTED]`. Afterwards, they downloaded `linper.sh` on the machine.
+
 From HackTheBox:\
 "In this Sherlock, you will familiarize yourself with Unix auth.log and wtmp logs. We'll explore a scenario where a Confluence server was brute-forced via its SSH service. After gaining access to the server, the attacker performed additional activities, which we can track using auth.log. Although auth.log is primarily used for brute-force analysis, we will delve into the full potential of this artifact in our investigation, including aspects of privilege escalation, persistence, and even some visibility into command execution."
 

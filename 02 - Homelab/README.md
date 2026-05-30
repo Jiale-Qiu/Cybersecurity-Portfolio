@@ -27,4 +27,3 @@ Secondary Goals:
      - Using findings from previous reports, create a new report outlining required actions to keep the Juice Shop compliant with standards
  - AI
      - Utilize machine learning and LLMs to help process large amounts of data
-
