@@ -24,7 +24,7 @@ These are the most complete examples of my thinking and methodology:
 ## Project Structure Overview
 
 - [`01 ⭐ Featured`](/01%20⭐%20Featured/) → My best work. As mentioned above, start here first.
-- [`02 🖥️ Homelab`](/02%20🖥️%20Homelab/) → Personal homelab where I set up a network and practice cybersecurity in my own environment
+- [`02 🖥️ Homelab`](/02%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
 - [`03 🔷 Defensive Security`](/03%20🔷%20Defensive%20Security/) → Defensive Security CTFs I've done.
 
 ## Current Direction
@@ -34,8 +34,8 @@ My current focuses:
 - improving skills in defensive investigations
 - learning offensive security and understand how adversaries attack networks and endpoints
 
-Other focuses:
-- Embedded systems cybersecurity
+Where I'm exploring:
+- embedded systems cybersecurity
 
 ## Notes
 
