@@ -40,7 +40,7 @@ These are the most complete examples of my thinking and methodology:
 ## Current Direction
 
 My current focuses:
-- critical thinkinking, deep analytical thought processes, and metacognition
+- critical thinking, deep analytical thought processes, and metacognition
 - improving skills in defensive investigations
 - learning offensive security and understand how adversaries attack networks and endpoints
 
