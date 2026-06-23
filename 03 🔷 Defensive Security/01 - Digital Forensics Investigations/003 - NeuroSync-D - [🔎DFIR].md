@@ -14,7 +14,7 @@ From HackTheBox:\
 ### Q1: What version of Next.js is the application using?
 Upon extracting the `.zip` file, I wanted to understand what each file contained. Therefore, I executed the command `head *`. Here, I find that a file `interface.log` contains information on the next.js version as well as its interface on the network. Here, I get my answer.
 
-![screenshot](screenshots/003/Q1+2.png)
+![screenshot](Images/003/Q1+2.png)
 
 ### Q2: What local port is the Next.js-based application running on?
 
@@ -28,7 +28,7 @@ This will require research on google. Thus, I used this search query: `"march" 2
 
 It is time to pivot to the webserver logs. I read `access.log` and found that every single event came from only one IP address, and that the whole log file was relatively short. Therefore, I could simply look at the first few entries. It appears that the attacker attempted to access webserver files to fingerprint it better, but was met with 404 not found. A few lines down the attacker finds an existing file and recieves code 200, meaning that they are able to retrieve the file.
 
-![screenshot](screenshots/003/Q4.png)
+![screenshot](Images/003/Q4.png)
 
 ### Q5: Then the attacker appears to have found an endpoint that is potentially affected by the previously identified vulnerability. What is that endpoint?
 
@@ -52,13 +52,13 @@ Or, you could read `interface.log` and also find the headers the attacker includ
 
 Looking at the files again, I notice `data-api.log`, which most likely logs data about the internal API. Upon reading it, the answer can be found.
 
-![screenshot](screenshots/003/Q6.png)
+![screenshot](Images/003/Q6.png)
 
 ### Q10: After the port scan, the attacker starts a brute-force attack to find some vulnerable endpoints in the previously identified API. Which vulnerable endpoint was found?
 
 Looking further down the logs, it is seen that the attacker is attempting to exploit an LFI vuln. The directory was enumerated in the brute force attack, so this must be the answer.
 
-![screenshot](screenshots/003/Q10.png)
+![screenshot](Images/003/Q10.png)
 
 ### Q11: When the vulnerable endpoint found was used maliciously for the first time?
 
@@ -76,7 +76,7 @@ Same artifacts to look at. Pretty much the same methodology as the previous ques
 
 The format of the question prompts to use `redis.log`. Immediately it is visible what the special command is.
 
-![screenshot](screenshots/003/Q14.png)
+![screenshot](Images/003/Q14.png)
 
 ### Q14: Finally, the attacker uses the sensitive information obtained earlier to create a special command that allows them to perform Redis injection and gain RCE on the system. What is the command string?
 
