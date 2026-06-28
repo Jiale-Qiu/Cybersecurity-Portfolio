@@ -25,6 +25,7 @@ These are the most complete examples of my thinking and methodology:
 
 - [`01 ⭐ Featured`](/01%20⭐%20Featured/) → My best work. As mentioned above, start here first.
     - [`01 - Brutus.md - [🔎DFIR]`](/01%20⭐%20Featured/01%20-%20Brutus.md%20-%20[🔎DFIR].md) → View a step by step walkthrough of my thinking and methodology as I investigate a brute-force attack on an endpoint.
+    - [`02 - NeuroSync-D - [🔎DFIR]`](/01%20⭐%20Featured/02%20-%20NeuroSync-D%20-%20[🔎DFIR].md]) → View a step by step walkthrough of my thinking and methodology as I investigate an incident involving the exploitation of an n-day vulnerability.
     - [`National Cyber League`](/01%20⭐%20Featured/National%20Cyber%20League.md) → Biannual competition, look here to see how I rank against my highschool & college peers. 
 - [`02 🖥️ Homelab`](/02%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
     - (WIP - CURRENTLY ARCHIVED UNTIL MID-LATE JUNE 2026)
@@ -39,9 +40,6 @@ My current focuses:
 - critical thinking, deep analytical thought processes, and metacognition
 - improving skills in defensive investigations
 - learning offensive security and understand how adversaries attack networks and endpoints
-
-Where I'm exploring:
-- embedded systems cybersecurity
 
 ## Notes
 
