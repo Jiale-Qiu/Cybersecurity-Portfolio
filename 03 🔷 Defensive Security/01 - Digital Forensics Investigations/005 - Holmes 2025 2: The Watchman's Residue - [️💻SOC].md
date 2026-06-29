@@ -1,4 +1,4 @@
-**Completion date:** 2026-06-26\
+**Completion date:** 2026-06-28\
 **Platform:** HackTheBox, [https://app.hackthebox.com/sherlocks/Holmes%25202025%25202%253A%2520The%2520Watchman's%2520Residue]\
 **Skills and Tools Used:** Wireshark, Google, Regipy, Regripper, Windows Analysis and Triage, USNJrnl, Jumplists, Log Analysis
 
