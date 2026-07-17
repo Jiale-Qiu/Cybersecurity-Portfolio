@@ -1,21 +1,21 @@
 # Homelab Entry #4: Network Revamp & Router-on-a-Stick Architecture Implementation
 
-## -// Project overview & Key Outcomes //-
+## -// ⭐ Project overview & Key Outcomes //-
 
 In order to secure my Homelab network and better match an enterprise network, I rearchitected my homelab network to move away from a single flat subnet and instead utilize a multi-VLAN Router-on-a-Stick configuration.
 
-### / Concepts Applied /
+### / 💠 Concepts Applied /
 - VLAN segmentation and subnets with 802.1Q VLAN Tagging
 - Firewall floating rules on OPNSense
 - Network setup for Virtual Machines (on Virtualbox)
 - Firewall testing and validation (via Nmap)
 
-### / Core Achievements /
+### / 🏆 Core Achievements /
 - Properly implemented the Router-on-a-Stick networking configuration on my Homelab
 - Designed and configured three VLANs (DMZ, Security, and a simulated WAN)
 - Verified success of firewall implementation via Nmap port scans
 
-## -// 1. Major Network Revamp and Router-on-a-Stick (RoaS) setup //-
+## -// 1️⃣ Major Network Revamp and Router-on-a-Stick (RoaS) setup //-
 
 Coming back to this homelab, I realized I needed a serious revamp of the network. The biggest change I wanted to do was to use VLANs to create a DMZ for the Juice Shop webapp.
 
@@ -38,7 +38,7 @@ Additionally, after turning on my router again, I realized I've made a pretty bi
 
 While I am doing this, I am also going to change my homelab's subnet from `192.168.1.x` to `10.0.0.x`. This makes my homelab network not interfere too much with my regular home network.
 
-## -// 2. VLAN Configuration //-
+## -// 2️⃣ VLAN Configuration //-
 
 Next, I will want to configure the VLANs for my network. These VLANs were the primary reason I purchased this switch. I'll have to do some configuration in three places: the switch's web management portal, my virtual machine, and the OPNSense router.
 
@@ -72,7 +72,7 @@ With `ifconfig`, I can verify that the subnetting works too. (`10.0.30.x` is the
 
 ![alt text](Images/4/ifconfig.png)
 
-## -// 3. DMZ & Fake Internet Firewall configuration //-
+## -// 3️⃣ DMZ & Fake Internet Firewall configuration //-
 So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will fix up the SIEM setup after I finish up everything else with the network.
 
 In OPNSense, I first set a static IP address to the Juice Shop -- `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
@@ -99,7 +99,7 @@ After rerunning the scan, it seems that our firewall does indeed work as intende
 
 For our final step, I want to explicitly block all packets going out of the Juice Shop. This should be fairly simple, as I just make a block rule that covers everything. Due to first match being enabled, if my floating rule is triggered then this block rule will not be triggered. That sums up the firewall setup for the DMZ. The rest should be simpler.
 
-## -// Firewall Testing //-
+## -// 4️⃣ Firewall Testing //-
 
 Now, finally one last test to make sure everything is running smoothly. I will make a list for what the firewall should be doing for each endpoint and what it actually does.
 
