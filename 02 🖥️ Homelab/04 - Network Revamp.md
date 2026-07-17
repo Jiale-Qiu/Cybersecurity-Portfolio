@@ -89,7 +89,7 @@ This is where I learn that OPNSense's firewall rules only process traffic in the
 
 When the scan was running though, I saw my ethernet cable's light blink rapidly, and it got me curious to see what was going on. So, I looked at the firewall logs and instantly got bombarded with a flood of traffic. I could see my device send thousands of packets to every single port on the Juice Shop, and it really put into perspective just how loud my Nmap scan was.
 
-/placeholder image/
+![alt text](Images/4/OPNSense-logs.jpg)
 
 Once the scan was finished, the only port that appeared was port 80. However, I got a bit suspicious as if the other two ports I saw before were filtered by the firewall, Nmap should report "Filtered" instead of hiding the port. This got me wondering if the two other ports were still active. Thus, I will turn off the firewall and run another nmap scan without restarting any devices.
 
