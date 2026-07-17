@@ -1,10 +1,21 @@
-# Homelab Entry #4: Network Revamp
+# Homelab Entry #4: Network Revamp & Router-on-a-Stick Architecture Implementation
 
-## What I learned
+## -// Project overview & Key Outcomes //-
 
-By revamping my setup to be a Router on a Stick (RoaS) setup, I further understood networking essentials. By setting up my own network with this architecture, I have better understood the role of VLANs and Switches, and the difference between a managed switch and an unmanaged switch. Oh yeah, and I also realized that WAN and WAP are very very different and not at all the same thing.
+In order to secure my Homelab network and better match an enterprise network, I rearchitected my homelab network to move away from a single flat subnet and instead utilize a multi-VLAN Router-on-a-Stick configuration.
 
-## 1. Major Network Revamp and Router-on-a-Stick (RoaS) setup
+### / Concepts Applied /
+- VLAN segmentation and subnets with 802.1Q VLAN Tagging
+- Firewall floating rules on OPNSense
+- Network setup for Virtual Machines (on Virtualbox)
+- Firewall testing and validation (via Nmap)
+
+### / Core Achievements /
+- Properly implemented the Router-on-a-Stick networking configuration on my Homelab
+- Designed and configured three VLANs (DMZ, Security, and a simulated WAN)
+- Verified success of firewall implementation via Nmap port scans
+
+## -// 1. Major Network Revamp and Router-on-a-Stick (RoaS) setup //-
 
 Coming back to this homelab, I realized I needed a serious revamp of the network. The biggest change I wanted to do was to use VLANs to create a DMZ for the Juice Shop webapp.
 
@@ -27,7 +38,7 @@ Additionally, after turning on my router again, I realized I've made a pretty bi
 
 While I am doing this, I am also going to change my homelab's subnet from `192.168.1.x` to `10.0.0.x`. This makes my homelab network not interfere too much with my regular home network.
 
-## 2. VLAN Configuration
+## -// 2. VLAN Configuration //-
 
 Next, I will want to configure the VLANs for my network. These VLANs were the primary reason I purchased this switch. I'll have to do some configuration in three places: the switch's web management portal, my virtual machine, and the OPNSense router.
 
@@ -61,7 +72,7 @@ With `ifconfig`, I can verify that the subnetting works too. (`10.0.30.x` is the
 
 ![alt text](Images/4/ifconfig.png)
 
-## DMZ & Fake Internet Firewall configuration
+## -// 3. DMZ & Fake Internet Firewall configuration //-
 So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will fix up the SIEM setup after I finish up everything else with the network.
 
 In OPNSense, I first set a static IP address to the Juice Shop -- `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
@@ -88,9 +99,11 @@ After rerunning the scan, it seems that our firewall does indeed work as intende
 
 For our final step, I want to explicitly block all packets going out of the Juice Shop. This should be fairly simple, as I just make a block rule that covers everything. Due to first match being enabled, if my floating rule is triggered then this block rule will not be triggered. That sums up the firewall setup for the DMZ. The rest should be simpler.
 
+## -// Firewall Testing //-
+
 Now, finally one last test to make sure everything is running smoothly. I will make a list for what the firewall should be doing for each endpoint and what it actually does.
 
-### My Kali Linux VM (On the fake internet)
+### / My Kali Linux VM (On the fake internet) /
 My Kali Linux VM should:
 - Be able to access port 80 of the Juice Shop, which is on `10.0.10.10`
 - not be able to access any other endpoint
@@ -102,7 +115,7 @@ My Kali Linux VM:
 
 Everything lines up nicely.
 
-### My Security VM (On the Security VLAN)
+### / My Security VM (On the Security VLAN) /
 My Security VM should:
 - Be able to communicate with the Juice Shop
 - Be able to communicate with the OPNSense management portal
@@ -120,7 +133,7 @@ My Security VM (after fixes):
 - **Can** communicate to the OPNSense management portal
 - **Can** communicate to the Switch management portal
 
-### Juice Shop
+### / Juice Shop (On the DMZ) /
 
 The Juice Shop should:
 - Be able to communicate with NOTHING except return requests from the internet on port 80
