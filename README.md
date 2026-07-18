@@ -20,7 +20,7 @@ These are the most complete examples of my thinking and methodology:
 
 - [`01 🖥️ Homelab`](/01%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
     - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive (Pre-Summer 2026)>) → Parts of the homelab I did before the summer of 2026. Most of the work here has been overhauled in the later documentations (Entry 4 and beyond)
-    - [04 - Network Revamp.md](<01 🖥️ Homelab/04 - Network Revamp.md>) → A full revamp of my homelab network, upgrading it to utilize the RoaS configuration.
+    - [`04 - Network Revamp.md`](<01 🖥️ Homelab/04 - Network Revamp.md>) → A full revamp of my homelab network, upgrading it to utilize the RoaS configuration.
 - [`02 🔷 Defensive Security`](/02%20🔷%20Defensive%20Security/) → Defensive Security CTFs I've done.
     - [`01 - Digital Forensics Investigations`](/03%20🔷%20Defensive%20Security/01%20-%20Digital%20Forensics%20Investigations/) → Take a look here to view detailed, methodological walkthroughs of cybersecurity investigations
     - [`02 - SOC Simulations`](/03%20🔷%20Defensive%20Security/02%20-%20SOC%20Simulations/) → Get a better view of how I might perform in the real world with TryHackMe SOC simulations
