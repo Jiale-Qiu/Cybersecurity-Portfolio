@@ -97,7 +97,7 @@ After rerunning the scan, it seems that our firewall does indeed work as intende
 
 For our final step, I want to explicitly block all packets going out of the Juice Shop. This should be fairly simple, as I just make a block rule that covers everything. Due to first match being enabled, if my floating rule is triggered then this block rule will not be triggered. That sums up the firewall setup for the DMZ. The rest should be simpler.
 
-## -// 4️⃣ Firewall Testing //-
+## 『 4️⃣ Firewall Testing 』
 
 Now, finally one last test to make sure everything is running smoothly. I will make a list for what the firewall should be doing for each endpoint and what it actually does.
 
