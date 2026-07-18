@@ -73,13 +73,13 @@ With `ifconfig`, I can verify that the subnetting works too. (`10.0.30.x` is the
 ## 『 3️⃣ DMZ & Fake Internet Firewall configuration 』
 So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will fix up the SIEM setup after I finish up everything else with the network.
 
-In OPNSense, I first set a static IP address to the Juice Shop -- `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
+In OPNSense, I first set a static IP address to the Juice Shop — `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
  
-To verify if this firewall rule works as intended, I disable the firewall rule and run an Nmap port scan for all 65535 ports. It seems that three ports are accessible -- port 80, 5040, and 7680. Next, I repeat the scan with the firewall enabled. I should except Nmap to only find port 80. Unfortunately, the same three ports are still accessible, meaning that I have made a mistake in my firewall. Such mistakes are important to catch early on -- any gap in security can cause devastating consequences.
+To verify if this firewall rule works as intended, I disable the firewall rule and run an Nmap port scan for all 65535 ports. It seems that three ports are accessible — port 80, 5040, and 7680. Next, I repeat the scan with the firewall enabled. I should except Nmap to only find port 80. Unfortunately, the same three ports are still accessible, meaning that I have made a mistake in my firewall. Such mistakes are important to catch early on — any gap in security can cause devastating consequences.
 
-<img src="Images/4/nmap-scan-firewall-off.pngg" width="80%">
+<img src="Images/4/nmap-scan-firewall-off.png" width="80%">
 
-With some research, I learn that OPNSense's firewall rules only process traffic in the ingress direction, which is why my firewall rule did not work. Thus, I created a floating rule instead, allowing me to enforce the rule across the entire network. I also make a rule to keep the router management portal accessible for the meantime (which I will disable later).
+With some research, I learn that OPNSense's firewall rules only process traffic in the **ingress** direction, which is why my firewall rule did not work. Thus, I created a floating rule instead, allowing me to enforce the rule across the entire network. I also make a rule to keep the router management portal accessible for the meantime (which I will disable later).
 
 My new rule can be seen below:
 
@@ -124,7 +124,7 @@ My Security VM:
 - **Cannot** communicate to the OPNSense management portal
 - **Cannot** communicate to the Switch management portal
 
-Everything is not lining up nicely. I need to review my firewall rules. After reviewing the firewall rules, nothing instantly looks wrong. The configuration seems like it works -- but it isn't. Once I checked my assigned subnet though, I found out that it was the same as my attacker VM and I realized that I was using both ethernet cables instead of just one. After fixing that problem, I reevaluated what I could connect to and everything seemed to finally work well.
+Everything is not lining up nicely. I need to review my firewall rules. After reviewing the firewall rules, nothing instantly looks wrong. The configuration seems like it works — but it isn't. Once I checked my assigned subnet though, I found out that it was the same as my attacker VM and I realized that I was using both ethernet cables instead of just one. After fixing that problem, I reevaluated what I could connect to and everything seemed to finally work well.
 
 My Security VM (after fixes):
 - Is able to connect to the Juice Shop
