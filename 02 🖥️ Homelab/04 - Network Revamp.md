@@ -71,7 +71,7 @@ With `ifconfig`, I can verify that the subnetting works too. (`10.0.30.x` is the
 <img src="Images/4/ifconfig.png" width="80%">
 
 ## 『 3️⃣ DMZ & Fake Internet Firewall configuration 』
-So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will the SIEM setup after I finish up everything else with the network.
+So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will reconfigure my SIEM setup after I finish up everything else with the network.
 
 In OPNSense, I first set a static IP address to the Juice Shop — `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
  
