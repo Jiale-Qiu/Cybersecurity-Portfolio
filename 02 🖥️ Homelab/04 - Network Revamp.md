@@ -71,15 +71,15 @@ With `ifconfig`, I can verify that the subnetting works too. (`10.0.30.x` is the
 <img src="Images/4/ifconfig.png" width="80%">
 
 ## 『 3️⃣ DMZ & Fake Internet Firewall configuration 』
-So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will fix up the SIEM setup after I finish up everything else with the network.
+So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will the SIEM setup after I finish up everything else with the network.
 
 In OPNSense, I first set a static IP address to the Juice Shop — `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
  
-To verify if this firewall rule works as intended, I disable the firewall rule and run an Nmap port scan for all 65535 ports. It seems that three ports are accessible — port 80, 5040, and 7680. Next, I repeat the scan with the firewall enabled. I should except Nmap to only find port 80. Unfortunately, the same three ports are still accessible, meaning that I have made a mistake in my firewall. Such mistakes are important to catch early on — any gap in security can cause devastating consequences.
+To verify if this firewall rule works as intended, I disable it and run an Nmap port scan for all 65535 ports. Once it finishes, three ports are accessible — port 80, 5040, and 7680. Next, I repeat the scan with the rule enabled, excepting only port 80 to be accessible. Unfortunately, the same three ports still appear as "open", meaning that the firewall has been misconfigured. Such mistakes are important to catch early on — any gap in security can cause devastating consequences.
 
 <img src="Images/4/nmap-scan-firewall-off.png" width="80%">
 
-With some research, I learn that OPNSense's firewall rules only process traffic in the **ingress** direction, which is why my firewall rule did not work. Thus, I created a floating rule instead, allowing me to enforce the rule across the entire network. I also make a rule to keep the router management portal accessible for the meantime (which I will disable later).
+With some research, I learn that OPNSense's firewall rules only process traffic in the **ingress** direction, which is why my firewall rule did not work. Thus, I created a floating rule instead, allowing me to enforce the rule across the entire network. I also make an additional rule to keep the router management portal accessible for me in the meantime (which I will disable later).
 
 My new rule can be seen below:
 
@@ -89,11 +89,11 @@ As the scan ran in the background, my eye got caught by the rapid blinking of th
 
 <img src="Images/4/OPNSense-logs.jpg" width="80%">
 
-Once the scan was finished, the only port that appeared was port 80. However, I got a bit suspicious as if the other two ports I saw before were filtered by the firewall, Nmap should report "Filtered" instead of hiding the port. This got me wondering if the two other ports were still active. Thus, I will turn off the firewall and run another Nmap scan without restarting any devices.
+Once the scan finished, the only port that appeared was port 80. However, I got a bit suspicious as if the other two ports I saw before were filtered by the firewall, Nmap should report "Filtered" instead of hiding the port. This got me wondering if the two other ports were still active. Thus, I repeated the scan for both firewall ON & OFF without restarting any devices.
 
 <img src="Images/4/nmap-scan-bothfirewallonandoff.png" width="80%">
 
-After rerunning the scan, it seems that our firewall does indeed work as intended. Maybe it was just the options I put in Nmap, but I reran the scans a few times and got the same results *(UPDATE - NMAP KNEW THE PORTS WERE FILTERED, BUT EVEN CLOSED PORTS WERE FILTERED SO NMAP CHOSE TO HIDE ALL OF THEM)*. Additionally, after turning off the temporary allow rule I set earlier, I was unable to connect to any other endpoint other than the Juice Shop.
+After rerunning the scan, it seems that our firewall does indeed work as intended. Maybe it was just the options I put in Nmap. *(UPDATE - NMAP KNEW THE PORTS WERE FILTERED, BUT EVEN CLOSED PORTS WERE FILTERED SO NMAP CHOSE TO HIDE ALL OF THEM)*. After turning off the temporary rule I set earlier, I was unable to connect to any other endpoint other than the Juice Shop.
 
 For our final step, I want to explicitly block all packets going out of the Juice Shop. This should be fairly simple, as I just make a block rule that covers everything. Due to first match being enabled, if my floating rule is triggered then this block rule will not be triggered. That sums up the firewall setup for the DMZ. The rest should be simpler.
 
@@ -139,4 +139,7 @@ The Juice Shop should:
 The Juice Shop:
 - Indeed, cannot communicate with anything except return requests from the internet on port 80.
 
-Everything lines up smoothly, and thus, this section of my homelab is complete. I have set up a full homelab network using the Router-on-a-Stick architecture, and have setup multiple VLANs with properly configured firewall rules.
+Everything lines up smoothly, and thus, my VLAN and firewall configuration is finished.
+
+## 『 5️⃣ Conclusion 』
+I've set up a Router-on-a-Stick network with multiple VLANs including a DMZ, and tested firewall rules using tools such as Nmap. Next up, I will reconfigure my SIEM running on the ELK stack to be compatible with my new network architecture.
