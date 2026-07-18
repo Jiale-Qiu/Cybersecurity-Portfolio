@@ -15,8 +15,6 @@ In order to secure my Homelab network and better match an enterprise network, I 
 - Designed and configured three VLANs (DMZ, Security, and a simulated WAN)
 - Verified success of firewall implementation via Nmap port scans
 
-
-
 ## 『 1️⃣ Major Network Revamp and Router-on-a-Stick (RoaS) setup 』
 
 Coming back to this homelab, I realized I needed a serious revamp of the network. Primarily, I wanted to use VLANs to create a DMZ for the Juice Shop webapp.
@@ -34,7 +32,7 @@ My desktop will host two different VMs: The attacker VM and the security VM. Due
 
 The full drawing of the network architecture can be seen below:
 
-![alt text](<Images/4/Network-Architecture.png>)
+<img src="Images/4/Network-Architecture.png" width="80%">
 
 A few days later my switch arrives, so now its time to set up my network for real. First off, I have to correct some major misconfigurations. There were two primary mistakes I made, but both were quick fixes:
 - The TP-Link WAP was not actually set to AP mode. I fixed this by going into the router's management portal and disabling the DHCP server.
@@ -46,56 +44,54 @@ I honestly don't know how I made those mistakes a few months ago. At least now I
 
 Next, I setup the VLANs for my network. I'll have to configure this in both my switch and in OPNSense. Because there will be three VLANs in this network (DMZ, Security, and fake internet), I assign port 3 as an access port for the DMZ and port 2 as a trunk port for the two other VLAns. Port 1 will also be used as the trunk port but straight into the router. You can see this configuration below.
 
-![alt text](Images/4/VLANs-switch.png)
+<img src="Images/4/VLANs-switch.png" width="80%">
 
 Unfortunately, I soon realized that Virtualbox does **not** support VLAN tagging and trunking on Windows hosts, meaning that a trunk cable won't be a viable option without Windows 11 Pro. Next, I tried to create virtual adapters with the Realtek Ethernet Diagnostic Utility, but that didn't work as Virtualbox was not identifying the virtual adapters no matter what I did. In the end, I ended up using the second ethernet port on my computer after finding it when diagnosing the Realtek utility.
 
 Below is my new updated network architecture without the second trunk cable.
 
-![alt text](Images/4/Network-Architecture-2.png)
+<img src="Images/4/Network-Architecture-2.png" width="80%">
 
 This also means that my VLAN setup needs to be different.
 
-![alt text](Images/4/VLANs-switch-2.png)
+<img src="Images/4/VLANs-switch-2.png" width="80%">
 
 After I finished assigning VLAN IDs in the switch, I moved onto OPNSense to actually assign a VLAN to each ID. Before I start making VLANs though, I set a static address to my switch as the switch's self-assigned IP address isn't lining up with what OPNSense assigns it.
 
-![alt text](Images/4/OPNSense-switchstaticmapping.png)
+<img src="Images/4/OPNSense-switchstaticmapping.png" width="80%">
 
 After that, I create the three VLANs I want and set their priorities. Interestingly, I also learned that the priority labelled "Best Effort (PCP 0)" does not get the best effort, and that "Excellent Effort (PCP 2)" gets better effort. When did the best effort not be the best effort? I don't know, but here's the config below:
 
-![alt text](Images/4/OPNSense-VLANs.png)
+<img src=Images/4/OPNSense-VLANs.png width="80%">
 
-![alt text](Images/4/OPNSense-VLANs2.png)
+<img src="Images/4/OPNSense-VLANs2.png" width="80%">
 
 With `ifconfig`, I can verify that the subnetting works too. (`10.0.30.x` is the subnet for the simulated internet)
 
-![alt text](Images/4/ifconfig.png)
+<img src="(Images/4/ifconfig.png" width="80%">
 
 ## 『 3️⃣ DMZ & Fake Internet Firewall configuration 』
 So the game plan is essentially this: The Juice Shop will only allow two-way traffic between HTTP port 80, where the webapp is hosted on. Later, I will add a second rule allowing only outbound traffic into the SIEM. I will fix up the SIEM setup after I finish up everything else with the network.
 
 In OPNSense, I first set a static IP address to the Juice Shop -- `10.0.10.10`. Next, I create an `in` rule that allows every TCP connection on port 80 to the IP address `10.0.10.10`.
-
-[text](<04 - Network Revamp.md>)
  
 To verify if this firewall rule works as intended, I disable the firewall rule and run an Nmap port scan for all 65535 ports. It seems that three ports are accessible -- port 80, 5040, and 7680. Next, I repeat the scan with the firewall enabled. I should except Nmap to only find port 80. Unfortunately, the same three ports are still accessible, meaning that I have made a mistake in my firewall. Such mistakes are important to catch early on -- any gap in security can cause devastating consequences.
 
-![alt text](Images/4/nmap-scan-firewall-off.png)
+<img src="Images/4/nmap-scan-firewall-off.pngg" width="80%">
 
 With some research, I learn that OPNSense's firewall rules only process traffic in the ingress direction, which is why my firewall rule did not work. Thus, I created a floating rule instead, allowing me to enforce the rule across the entire network. I also make a rule to keep the router management portal accessible for the meantime (which I will disable later).
 
 My new rule can be seen below:
 
-![alt text](Images/4/OPNSense-DMZfloatingRule.png)
+<img src="Images/4/OPNSense-DMZfloatingRule.png" width="80%">
 
 As the scan ran in the background, my eye got caught by the rapid blinking of the light next to my ethernet cable, and I was captivated to look at what Nmap was doing behind the scenes. I checked the OPNSense router and viewed the firewall logs, and instantly got bombarded with a flood of traffic. It was crazy seeing just how loud my Nmap scan was, going through each port at breakneck speed.
 
-![alt text](Images/4/OPNSense-logs.jpg)
+<img src="Images/4/OPNSense-logs.jpg" width="80%">
 
 Once the scan was finished, the only port that appeared was port 80. However, I got a bit suspicious as if the other two ports I saw before were filtered by the firewall, Nmap should report "Filtered" instead of hiding the port. This got me wondering if the two other ports were still active. Thus, I will turn off the firewall and run another Nmap scan without restarting any devices.
 
-![alt text](Images/4/nmap-scan-bothfirewallonandoff.png)
+<img src="Images/4/nmap-scan-bothfirewallonandoff.png" width="80%">
 
 After rerunning the scan, it seems that our firewall does indeed work as intended. Maybe it was just the options I put in Nmap, but I reran the scans a few times and got the same results *(UPDATE - NMAP KNEW THE PORTS WERE FILTERED, BUT EVEN CLOSED PORTS WERE FILTERED SO NMAP CHOSE TO HIDE ALL OF THEM)*. Additionally, after turning off the temporary allow rule I set earlier, I was unable to connect to any other endpoint other than the Juice Shop.
 
