@@ -11,7 +11,7 @@ These are the most complete examples of my thinking and methodology:
 
 - [**Homelab**](<01 🖥️ Homelab>) → Look here to see my apply cybersecurity and IT theory into a practical project that I build from the ground-up
 - [**HackTheBox Sherlock Investigations**](<02 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Read these to understand my methodology and thinking
-- [**National Cyber League**](<02 🔷 Defensive Security/National Cyber League.md>) → Look at these to see where I rank amongst college & highschool students
+- [**National Cyber League**](<02 🔷 Defensive Security/I - National Cyber League.md>) → Look at these to see where I rank amongst college & highschool students
 
 ## 『 🏗️ Github Structure Overview 』
 
