@@ -1,6 +1,6 @@
 # Cybersecurity Portfolio
 
-I am a highschool sophomore attending the Downingtown STEM Academy. I am focused on defensive cybersecurity, with hands-on practice involving investigative CTFs (TryHackMe & HackTheBox Sherlocks) and competitions (National Cyber League). I am also exploring offensive technques to understand attacker behaviior, but my primary emphasis is defensive.
+I am a highschool sophomore attending the Downingtown STEM Academy. I am focused on defensive cybersecurity, with hands-on practice involving investigative CTFs (TryHackMe & HackTheBox Sherlocks) and competitions (National Cyber League). I am also exploring offensive technques to understand attacker behaviour, but my primary emphasis is defensive.
 
 ## Core Focus Areas
 
@@ -16,7 +16,7 @@ These are the most complete examples of my thinking and methodology:
 - [**HackTheBox Sherlock Investigations**](<02 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Read these to understand my methodology and thinking
 - [**National Cyber League**](<02 🔷 Defensive Security/National Cyber League.md>) → Look at these to see where I rank amongst college & highschool students
 
-## Project Structure Overview
+## Github Structure Overview
 
 - [`01 🖥️ Homelab`](/01%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
     - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive (Pre-Summer 2026)>) → Parts of the homelab I did before the summer of 2026. Most of the work here has been overhauled in the later documentations (Entry 4 and beyond)
@@ -25,13 +25,15 @@ These are the most complete examples of my thinking and methodology:
     - [`01 - Digital Forensics Investigations`](/03%20🔷%20Defensive%20Security/01%20-%20Digital%20Forensics%20Investigations/) → Take a look here to view detailed, methodological walkthroughs of cybersecurity investigations
     - [`02 - SOC Simulations`](/03%20🔷%20Defensive%20Security/02%20-%20SOC%20Simulations/) → Get a better view of how I might perform in the real world with TryHackMe SOC simulations
     - [`99 - Other Defensive CTFs`](/03%20🔷%20Defensive%20Security/99%20-%20Other%20Defensive%20CTFs/) → Just a collection of a lot of other CTFs I done. Mainly just to document other CTFs that I've completed but haven't heavily documented.
+- [`3 🔺 Offensive Security`](<03 🔺 Offensive Security>) → A collection of some offensive stuff I'm learning. Note that I do not specialize in offensive security, and that offensive security is just a complement to defensive.
+- [`04 📜 Certificates`](<04 📜 Certificates>) → Certificates I've collected. Mostly just certificates of completions from TryhackMe. I'm going to go for Security+ next year.
 
 ## Current Direction
 
 My current focuses:
-- critical thinking, deep analytical thought processes, and metacognition
-- improving skills in defensive investigations
-- learning offensive security and understand how adversaries attack networks and endpoints
+- Critical thinking, deep analytical thought processes, and metacognition, especially in defensive investigations
+- Developing homelab
+- Learning offensive security and understand how adversaries attack networks and endpoints
 
 ## Notes
 
