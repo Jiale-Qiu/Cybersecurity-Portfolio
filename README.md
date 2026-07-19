@@ -1,14 +1,11 @@
 # Cybersecurity Portfolio
 
-I am a highschool sophomore attending the Downingtown STEM Academy. I am focused on defensive cybersecurity, with hands-on practice involving investigative CTFs (TryHackMe & HackTheBox Sherlocks) and competitions (National Cyber League). I am also exploring offensive technques to understand attacker behaviour, but my primary emphasis is defensive.
+## 『 ❓ About Me 』
+- Highschool sophomore attending the Downingtown STEM Academy
+- Focused on Defensive Cybersecurity, especially SOC and Digital Forensics
+- Looking for an internship position in Cybersecurity, optimally defensive/blue team focused on SOC or Digital Forensics
 
-## Core Focus Areas
-
-- Security investigations & Digital Forensics (DFIR / SOC-style analysis)
-- Threat hunting and log analysis
-- Foundational offensive security (to understand attackers better)
-
-## Featured Work (Start Here)
+## 『 ⭐ Featured Work (Start Here) 』 
 
 These are the most complete examples of my thinking and methodology:
 
@@ -16,7 +13,7 @@ These are the most complete examples of my thinking and methodology:
 - [**HackTheBox Sherlock Investigations**](<02 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Read these to understand my methodology and thinking
 - [**National Cyber League**](<02 🔷 Defensive Security/National Cyber League.md>) → Look at these to see where I rank amongst college & highschool students
 
-## Github Structure Overview
+## 『 🏗️ Github Structure Overview 』
 
 - [`01 🖥️ Homelab`](/01%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
     - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive (Pre-Summer 2026)>) → Parts of the homelab I did before the summer of 2026. Most of the work here has been overhauled in the later documentations (Entry 4 and beyond)
@@ -28,18 +25,17 @@ These are the most complete examples of my thinking and methodology:
 - [`3 🔺 Offensive Security`](<03 🔺 Offensive Security>) → A collection of some offensive stuff I'm learning. Note that I do not specialize in offensive security, and that offensive security is just a complement to defensive.
 - [`04 📜 Certificates`](<04 📜 Certificates>) → Certificates I've collected. Mostly just certificates of completions from TryhackMe. I'm going to go for Security+ next year.
 
-## Current Direction
+## 『 🔍 Core Focus Areas 』
 
-My current focuses:
 - Critical thinking, deep analytical thought processes, and metacognition, especially in defensive investigations
 - Developing homelab
 - Learning offensive security and understand how adversaries attack networks and endpoints
 
-## Notes
+## 『 📝 Notes 』
 
 This portfolio reflects my ongoing learning as time passes. This portfolio documents progression alongside accomplishments.
 
-## Contacts
+## 『 📞 Contacts 』
 TryHackMe Profile: https://tryhackme.com/p/c1eb  
 Discord Username: c1eb_13
 Email: [jialeqiu013@gmail.com](mailto:jialeqiu013@gmail.com)
