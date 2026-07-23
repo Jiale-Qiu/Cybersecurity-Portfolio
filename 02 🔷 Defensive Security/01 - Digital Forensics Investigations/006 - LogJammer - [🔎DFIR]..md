@@ -30,7 +30,7 @@ Completed a HackTheBox sherlock simulating a real-world Digital Forensics & Inci
 
 ---
 
-> **Summary Takeaway for Hiring Managers:** Demonstrates a practical, methodical approach to triage and forensic analysis—efficiently sifting through high-volume event logs to identify IOCs, persistence mechanisms, and defense evasion techniques.
+> **Summary Takeaway:** Demonstrates a practical, methodical approach to triage and forensic analysis—efficiently sifting through high-volume event logs to identify IOCs, persistence mechanisms, and defense evasion techniques.
 
 ### Post-Investigation Summary:
 An insider threat logged into their workstation at `27/03/2023 14:##:## UDT` and proceeded to permit a metasploit C2 connection via the firewall. They then tampered with an audit policy `##############` to hinder logging capabilities of the system. The threat then created a scheduled task to automate execution of a powershell file found on the user's desktop. Additionally, the threat attempted to import an Active Directory enumeration tool -- SharpHound -- but was blocked by the antivirus. Finally, the threat took an MD5 hash of the aforementioned powershell file and proceeded to clear the endpoint's firewall logs.
