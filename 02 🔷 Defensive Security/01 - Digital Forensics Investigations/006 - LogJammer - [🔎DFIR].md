@@ -37,10 +37,10 @@ Completed a HackTheBox sherlock simulating a real-world Digital Forensics & Inci
 ## Post-Investigation Summary:
 An insider threat logged into their workstation at `27/03/2023 14:##:## UDT` and proceeded to permit a metasploit C2 connection via the firewall. They then tampered with an audit policy `##############` to hinder logging capabilities of the system. The threat then created a scheduled task to automate execution of a powershell file found on the user's desktop. Additionally, the threat attempted to import an Active Directory enumeration tool -- SharpHound -- but was blocked by the antivirus. Finally, the threat took an MD5 hash of the aforementioned powershell file and proceeded to clear the endpoint's firewall logs.
 
-### From HackTheBox:
+## From HackTheBox:
 You have been presented with the opportunity to work as a junior DFIR consultant for a big consultancy. However, they have provided a technical assessment for you to complete. The consultancy Forela-Security would like to gauge your knowledge of Windows Event Log Analysis. Please analyse and report back on the questions they have asked.
 
-### Methodology and Thinking
+## Methodology and Thinking
 
 ### Q1: When did the cyberjunkie user first successfully log into his computer? (UTC)
 Seems like we only have Windows event logs. I'll first parse all of them with EvtxECmd. For sign-in events, I'm looking for event ID 4624 in the security logs. There are 67 logon event, but we want to find the time the user first successfully logged onto his computer. There are three different logon types visible:
