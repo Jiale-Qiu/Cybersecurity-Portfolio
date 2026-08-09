@@ -1,3 +1,2 @@
-# ABCDABCD
+# About this Gitbook
 
-testing testing testing
