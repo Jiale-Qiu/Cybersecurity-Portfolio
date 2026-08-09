@@ -62,3 +62,6 @@ Once I run the command, the download succeeds but the connection to `10.0.20.20:
 
 ![alt text](Images/5/agentEnrollmentConfirmed.png)
 
+First, I want to ingest Sysmon logs into the SIEM. I temporarily allow my security VM to access the internet to download the Windows integration for the Elastic Fleet.
+
+![alt text](Images/5/image.png)
