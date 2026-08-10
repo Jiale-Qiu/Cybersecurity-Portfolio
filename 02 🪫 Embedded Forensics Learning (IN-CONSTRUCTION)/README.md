@@ -4,7 +4,7 @@ My notes and hands-on projects for learning hardware and embedded system forensi
 
 **Live notes:** [https://c1eb.gitbook.io/notes-and-guides](https://c1eb.gitbook.io/notes-and-guides/notes)
 
-[![https://c1eb.gitbook.io/notes-and-guides](https://shields.io)](https://c1eb.gitbook.io/notes-and-guides)
+[![https://c1eb.gitbook.io/notes-and-guide/notess](https://shields.io)](https://c1eb.gitbook.io/notes-and-guides/notes)
 
 
 ## What this is
