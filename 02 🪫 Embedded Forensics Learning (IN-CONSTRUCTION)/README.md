@@ -1,2 +1,11 @@
-# About this Gitbook
+# 02 🪫 Embedded Forensics Learning
 
+My notes and hands-on projects for learning hardware and embedded system forensics.
+
+**Live notes:** [https://c1eb.gitbook.io/notes-and-guides](https://c1eb.gitbook.io/notes-and-guides/notes)
+
+## What this is
+
+This repo tracks my work as I learn to analyze and extract data from physical hardware. The goal is to build skills at the intersection of software analysis and physical devices.
+
+Everything here is documented in the Gitbook as I go — notes during learning, guides when I'm doing.
