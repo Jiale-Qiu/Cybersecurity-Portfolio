@@ -1,3 +1,4 @@
-# ABCDABCD
+# Notes
 
-testing testing testing
+Notes I've created during my learning.
+
