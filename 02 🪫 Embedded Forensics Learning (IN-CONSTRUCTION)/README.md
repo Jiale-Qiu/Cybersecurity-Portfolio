@@ -2,7 +2,7 @@
 
 My notes and hands-on projects for learning hardware and embedded system forensics. Still in progress and very new, so there isn't much to see (yet).
 
-**GitBook:** [https://c1eb.gitbook.io/notes-and-guides](https://c1eb.gitbook.io/notes-and-guides/notes)
+**GitBook:** [https://c1eb.gitbook.io/notes-and-guides](https://c1eb.gitbook.io/notes-and-guides/notes)\
 **GitHub Portfolio:** [https://github.com/Jiale-Qiu/Cybersecurity-Portfolio](https://github.com/Jiale-Qiu/Cybersecurity-Portfolio)
 
 ## What this is
