@@ -62,6 +62,29 @@ Once I run the command, the download succeeds but the connection to `10.0.20.20:
 
 ![alt text](Images/5/agentEnrollmentConfirmed.png)
 
-First, I want to ingest Sysmon logs into the SIEM. I temporarily allow my security VM to access the internet to download the Windows integration for the Elastic Fleet.
+Next, I'll configure some stuff that I should've done earlier.
+First, I'll give Elasticsearch 8 gigabytes of RAM. I create the file `/etc/elasticsearch/jvm.options.d/heap.options` and write these two lines below:
 
-![alt text](Images/5/image.png)
+```
+-Xms8g
+-Xmx8g
+```
+
+Afterwards, I restart the Elasticsearch service. Next, as this homelab is essentially an airgapped environment, I need to point Kibana to the registry where it will download integrations and also that the homelab is airgapped. Inside of `/etc/kibana/kibana.yml`, I put these lines and then restart Kibana:
+
+```
+xpack.encryptedSavedObjects.encryptionKey: "[redacted]"
+xpack.fleet.registryUrl: "http://localhost:8081"
+xpack.fleet.isAirGapped: true
+```
+
+Now that I've configured Kibana to run in an airgapped environment, I need to host the Elastic Package Registry on my network. Luckily, Elastic provides a pre-built docker image for this. That means I'll have to install Docker first. After installing it and downloading the Elastic Package Registry, I am now ready to install integrations on my Elastic Fleet Agents.
+
+Sysmon is installed on the Juice Shop webserver, and I'll want to ingest those logs. I'll also need to ingest the webserver logs. For Sysmon, I can utilize the Windows integration.  Just to verify nothing is broken, I check the agent is working properly, and it appears that it is. I also make sure the Elastic Package Registry is working on docker.
+
+![alt text](Images/5/elasticAgentHealthy.png)
+
+![alt text](Images/5/eprRunning.png)
+
+The System and Windows integrations are already installed, but I would also like to install the Elastic Defend Integration.
+
