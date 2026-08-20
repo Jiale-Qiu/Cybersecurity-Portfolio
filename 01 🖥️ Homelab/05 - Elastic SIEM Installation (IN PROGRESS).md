@@ -88,3 +88,24 @@ Sysmon is installed on the Juice Shop webserver, and I'll want to ingest those l
 
 The System and Windows integrations are already installed, but I would also like to install the Elastic Defend Integration.
 
+![alt text](Images/5/installElasticDefend.png)
+
+I simply add Elastic Defend from the integrations tab, and after it's done installing I check up on my agent to see if it went smoothly. Unfortunately, the agent reports "Unhealthy" as its status, meaning something has gone wrong. It appears that Elastic Defend is unable to connect to Elasticsearch.
+
+![alt text](Images/5/unhealthy.png)
+
+First, I'll check if any packets are getting blocked by the firewall. According to OPNSense, it is not blocking any packets. Next, I checked the Fleet settings, and identified the main problem. I incorrectly set up the output host as `127.0.0.1` — localhost — instead of the real internal IP address, which was `10.0.20.20`.
+
+![alt text](Images/5/wrongoutput.png)
+
+I fixed this by editing `kibana.yml` and then restarting both Kibana and the Elastic Agent on the endpoint.
+
+![alt text](Images/5/correctOutput.png)
+
+After applying the fix, the agent is up and healthy! Awesome! The agent metrics are also appearing correctly!
+
+![alt text](Images/5/healthy.png)
+
+![alt text](Images/5/telemetry.png)
+
+Let's also see if Sysmon is also getting ingested properly. I will open the Voice Recorder app on Windows and then check if the SIEM ingests it. As expected, the event is logged and I am able to filter for it. And with that, I have finished setting up the essential configurations for the Elastic Stack.
