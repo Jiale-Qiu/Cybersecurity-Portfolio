@@ -109,3 +109,5 @@ After applying the fix, the agent is up and healthy! Awesome! The agent metrics 
 ![alt text](Images/5/telemetry.png)
 
 Let's also see if Sysmon is also getting ingested properly. I will open the Voice Recorder app on Windows and then check if the SIEM ingests it. As expected, the event is logged and I am able to filter for it. And with that, I have finished setting up the essential configurations for the Elastic Stack.
+
+Oh yeah, and I DID, in fact, remember to remove the firewall allow rule for port 8080. See? I am very responsible. :>
