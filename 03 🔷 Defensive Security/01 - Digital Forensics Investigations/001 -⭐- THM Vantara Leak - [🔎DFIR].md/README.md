@@ -26,8 +26,8 @@ Partway through the investigation, the timeline stopped lining up: Prefetch show
 - Investigator notes and working timeline spreadsheet (linked in report appendix, and also underneath)
 
 ## Links
-https://docs.google.com/document/d/1Lzx70mom2cZdvwT1mzPws1-OPwfbkCrnpnG5TmaEars/edit?usp=sharing - Investigator's Notes
-https://docs.google.com/spreadsheets/d/1lXCx9vvBQaPycv8Q_Qt2IPNul-2shAJdiJyBw84gj10/edit?usp=sharing - Investiator's Constructed Timeline
+https://docs.google.com/document/d/1Lzx70mom2cZdvwT1mzPws1-OPwfbkCrnpnG5TmaEars/edit?usp=sharing - Investigator's Notes \
+https://docs.google.com/spreadsheets/d/1lXCx9vvBQaPycv8Q_Qt2IPNul-2shAJdiJyBw84gj10/edit?usp=sharing - Investigator's Constructed Timeline
 
 ## Disclaimer
 
