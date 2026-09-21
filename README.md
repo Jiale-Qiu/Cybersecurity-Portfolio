@@ -51,6 +51,6 @@ These are projects that best represent my current skills, methodology, and pract
 This portfolio documents my progression over time alongside completed projects, investigations, competitions, and ongoing areas of study.
 
 ## 『 📞 Contacts 』
-TryHackMe Profile: https://tryhackme.com/p/c1eb  
-Discord Username: c1eb_13
-Email: [jialeqiu013@gmail.com](mailto:jialeqiu013@gmail.com)
+TryHackMe Profile: https://tryhackme.com/p/c1eb\
+Discord Username: c1eb_13\
+Email: [jialeqiu013@gmail.com](mailto:jialeqiu013@gmail.com)\
