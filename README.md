@@ -2,53 +2,38 @@
 
 ## 『 ❓ About Me 』
 - Highschool sophomore attending the Downingtown STEM Academy
-- Focused on Defensive Cybersecurity, particularly **Digital Forensics & Incident Response (DFIR)** and security operations
-- Currently building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles
+- Focused on Defensive Cybersecurity, especially SOC and Digital Forensics
+- Looking for an internship position in Cybersecurity, optimally defensive/blue team focused on SOC or Digital Forensics
 
 ## 『 ⭐ Featured Work (Start Here) 』 
 
-These are projects that best represent my current skills, methodology, and practical experience.
+These are the most complete examples of my thinking and methodology:
 
-- [**🔎 THM Vantara Leak — DFIR Investigation**](03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md) → My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
-
-- [**🖥️ Homelab**](01 🖥️ Homelab) → A security-focused homelab built from the ground up to apply networking, systems, and defensive security concepts in a practical environment
-
-- [**🏆 National Cyber League**](03 🔷 Defensive Security/I - National Cyber League.md) → Competition results demonstrating my performance against other highschool and university students across a broad range of cybersecurity challenges
-
+- [**Homelab**](<01 🖥️ Homelab>) → Look here to see my apply cybersecurity and IT theory into a practical project that I build from the ground-up
+- [**HackTheBox Sherlock Investigations**](<03 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Read these to understand my methodology and thinking
+- [**National Cyber League**](<03 🔷 Defensive Security/I - National Cyber League.md>) → Look at these to see where I rank amongst college & highschool students
 
 ## 『 🏗️ Github Structure Overview 』
 
-- [`01 🖥️ Homelab`](01 🖥️ Homelab) → Personal homelab used to practice networking, systems administration, security monitoring, and cybersecurity
+- [`01 🖥️ Homelab`](/01%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
+    - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive (Pre-Summer 2026)>) → Parts of the homelab I did before the summer of 2026. Most of the work here has been overhauled in the later documentations (Entry 4 and beyond)
+    - [`04 - Network Revamp.md`](<01 🖥️ Homelab/04 - Network Revamp.md>) → A full revamp of my homelab network, upgrading it to utilize the RoaS configuration.
+- [`02 🔷 Defensive Security`](</03 🔷 Defensive Security>) → Defensive Security CTFs I've done.
+    - [`01 - Digital Forensics Investigations`](/03%20🔷%20Defensive%20Security/01%20-%20Digital%20Forensics%20Investigations/) → Take a look here to view detailed, methodological walkthroughs of cybersecurity investigations
+    - [`02 - SOC Simulations`](/03%20🔷%20Defensive%20Security/02%20-%20SOC%20Simulations/) → Get a better view of how I might perform in the real world with TryHackMe SOC simulations
+    - [`99 - Other Defensive CTFs`](/03%20🔷%20Defensive%20Security/99%20-%20Other%20Defensive%20CTFs/) → Just a collection of a lot of other CTFs I done. Mainly just to document other CTFs that I've completed but haven't heavily documented.
+- [`3 🔺 Offensive Security`](<04 🔺 Offensive Security>) → A collection of some offensive stuff I'm learning. Note that I do not specialize in offensive security, and that offensive security is just a complement to defensive.
+- [`04 📜 Certificates`](<05 📜 Certificates>) → Certificates I've collected. Mostly just certificates of completions from TryhackMe. I'm going to go for Security+ next year.
 
-  - [`04 - Network Revamp.md`](01 🖥️ Homelab/04 - Network Revamp.md) → Major network redesign using VLANs and Router-on-a-Stick
-  - [`05 - Elastic SIEM Installation`](01 🖥️ Homelab/05 - Elastic SIEM Installation %28IN PROGRESS%29.md) → Set up the Elastic Stack and Elastic EDR across my homelab network
-  - [`Archive (Pre-Summer 2026)`](01 🖥️ Homelab/Archive %28Pre-Summer 2026%29) → Earlier stages of the homelab preserved for reference
+## 『 🔍 Core Focus Areas 』
 
-- [`02 🪫 Embedded Forensics Learning`](02 🪫 Embedded Forensics Learning %28IN-CONSTRUCTION%29) → Early exploration of embedded systems and the intersection between cybersecurity and physical devices (Likely to stay in-construction for a while)
-
-- [`03 🔷 Defensive Security`](03 🔷 Defensive Security) → My primary area of cybersecurity study
-
-  - [`01 - Digital Forensics Investigations`](03 🔷 Defensive Security/01 - Digital Forensics Investigations) → Detailed DFIR investigations and methodological writeups
-  - [`02 - SOC Simulations`](03 🔷 Defensive Security/02 - SOC Simulations) → TryHackMe SOC simulations and defensive investigations
-  - [`99 - Other Defensive CTFs`](03 🔷 Defensive Security/99 - Other Defensive CTFs) → Additional defensive CTFs and shorter writeups
-  - [`I - National Cyber League.md`](03 🔷 Defensive Security/I - National Cyber League.md) → NCL competition history and results
-
-- [`04 🔺 Offensive Security`](04 🔺 Offensive Security) → A secondary area of study used to better understand how adversaries attack networks and endpoints
-
-- [`05 📜 Certificates`](05 📜 Certificates) → Certificates and course completions from my cybersecurity education
-
-
-## 『 🔍 What I Am Developing 』
-
-* Evidence-based investigation and analytical reasoning
-* Practical networking, systems, and cybersecurity skills
-* Understanding adversary behavior to improve defensive investigations
-* Independent problem solving and technical research
-* Clear documentation of findings, reasoning, uncertainty, and limitations
+- Critical thinking, deep analytical thought processes, and metacognition, especially in defensive investigations
+- Developing homelab
+- Learning offensive security and understand how adversaries attack networks and endpoints
 
 ## 『 📝 Notes 』
 
-This portfolio documents my progression over time alongside completed projects, investigations, competitions, and ongoing areas of study.
+This portfolio reflects my ongoing learning as time passes. This portfolio documents progression alongside accomplishments.
 
 ## 『 📞 Contacts 』
 TryHackMe Profile: https://tryhackme.com/p/c1eb  
