@@ -1,95 +1,41 @@
 # Cybersecurity Portfolio
 
 ## 『 ❓ About Me 』
+- Highschool sophomore attending the Downingtown STEM Academy
+- Focused on Defensive Cybersecurity, especially SOC and Digital Forensics
+- Looking for an internship position in Cybersecurity, optimally defensive/blue team focused on SOC or Digital Forensics
 
-High school sophomore at Downingtown STEM Academy.
+## 『 ⭐ Featured Work (Start Here) 』 
 
-I focus primarily on **defensive cybersecurity**, with a particular interest in **Digital Forensics & Incident Response (DFIR)** and security operations.
+These are the most complete examples of my thinking and methodology:
 
-My goal with this portfolio is to document not just what I have learned, but **how I approach unfamiliar technical problems, investigate evidence, and apply cybersecurity concepts in practice**.
+- [**Homelab**](<01 🖥️ Homelab>) → Look here to see my apply cybersecurity and IT theory into a practical project that I build from the ground-up
+- [**HackTheBox Sherlock Investigations**](<03 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Read these to understand my methodology and thinking
+- [**National Cyber League**](<03 🔷 Defensive Security/I - National Cyber League.md>) → Look at these to see where I rank amongst college & highschool students
 
-I am currently building toward future internship opportunities in defensive cybersecurity, particularly DFIR, SOC, and related blue-team roles.
+## 『 🏗️ Github Structure Overview 』
 
-## 『 ⭐ Featured Work — Start Here 』
+- [`01 🖥️ Homelab`](/01%20🖥️%20Homelab/) → Personal homelab where I configure a network and practice cybersecurity in my own environment
+    - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive (Pre-Summer 2026)>) → Parts of the homelab I did before the summer of 2026. Most of the work here has been overhauled in the later documentations (Entry 4 and beyond)
+    - [`04 - Network Revamp.md`](<01 🖥️ Homelab/04 - Network Revamp.md>) → A full revamp of my homelab network, upgrading it to utilize the RoaS configuration.
+- [`02 🔷 Defensive Security`](</03 🔷 Defensive Security>) → Defensive Security CTFs I've done.
+    - [`01 - Digital Forensics Investigations`](/03%20🔷%20Defensive%20Security/01%20-%20Digital%20Forensics%20Investigations/) → Take a look here to view detailed, methodological walkthroughs of cybersecurity investigations
+    - [`02 - SOC Simulations`](/03%20🔷%20Defensive%20Security/02%20-%20SOC%20Simulations/) → Get a better view of how I might perform in the real world with TryHackMe SOC simulations
+    - [`99 - Other Defensive CTFs`](/03%20🔷%20Defensive%20Security/99%20-%20Other%20Defensive%20CTFs/) → Just a collection of a lot of other CTFs I done. Mainly just to document other CTFs that I've completed but haven't heavily documented.
+- [`3 🔺 Offensive Security`](<04 🔺 Offensive Security>) → A collection of some offensive stuff I'm learning. Note that I do not specialize in offensive security, and that offensive security is just a complement to defensive.
+- [`04 📜 Certificates`](<05 📜 Certificates>) → Certificates I've collected. Mostly just certificates of completions from TryhackMe. I'm going to go for Security+ next year.
 
-These are the projects and investigations that best represent my current skills and methodology.
+## 『 🔍 Core Focus Areas 』
 
-### 🔎 [**THM Vantara Leak — DFIR Investigation**](03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md)
+- Critical thinking, deep analytical thought processes, and metacognition, especially in defensive investigations
+- Developing homelab
+- Learning offensive security and understand how adversaries attack networks and endpoints
 
-My most substantial DFIR investigation to date.
+## 『 📝 Notes 』
 
-I reconstructed an intrusion against a fictional financial organization from a limited KAPE evidence set, correlating Windows Security logs, MFT data, Prefetch, PowerShell history, Task Scheduler logs, and other artifacts.
+This portfolio reflects my ongoing learning as time passes. This portfolio documents progression alongside accomplishments.
 
-The investigation covers initial access, execution, persistence, discovery, data collection/staging, and attempted lateral movement. A major focus of the investigation was distinguishing **supported conclusions from possibilities that could not be confirmed due to missing evidence**.
-
-→ Read the full report and investigation notes.
-
-### 🖥️ [**Homelab**](01 🖥️ Homelab)
-
-A security-focused homelab built from the ground up.
-
-The project includes network segmentation, OPNsense, VLANs, an isolated environment, endpoint telemetry, and an Elastic-based security monitoring stack.
-
-→ See how I apply networking, IT, and security concepts in a practical environment.
-
-### 🏆 [**National Cyber League**](03 🔷 Defensive Security/I - National Cyber League.md)
-
-My primary cybersecurity competition experience.
-
-→ View competition results and my progression across defensive and offensive security challenges.
-
-## 『 🏗️ Repository Structure 』
-
-### [`01 🖥️ Homelab`](01 🖥️ Homelab)
-
-Personal homelab used to practice networking, systems administration, security monitoring, and defensive security.
-
-* [`04 - Network Revamp.md`](01 🖥️ Homelab/04 - Network Revamp.md) — Major network redesign using VLANs and Router-on-a-Stick.
-* [`05 - Elastic SIEM Installation`](01 🖥️ Homelab/05 - Elastic SIEM Installation %28IN PROGRESS%29.md) — Elastic security monitoring and endpoint telemetry.
-
-Older homelab work is preserved in the archive.
-
-### [`03 🔷 Defensive Security`](03 🔷 Defensive Security)
-
-My primary area of study.
-
-* [`01 - Digital Forensics Investigations`](03 🔷 Defensive Security/01 - Digital Forensics Investigations) — Detailed DFIR investigations and methodological writeups.
-* [`02 - SOC Simulations`](03 🔷 Defensive Security/02 - SOC Simulations) — TryHackMe SOC simulations.
-* [`99 - Other Defensive CTFs`](03 🔷 Defensive Security/99 - Other Defensive CTFs) — Additional defensive challenges and shorter writeups.
-* [`I - National Cyber League.md`](03 🔷 Defensive Security/I - National Cyber League.md) — NCL competition history and results.
-
-### [`04 🔺 Offensive Security`](04 🔺 Offensive Security)
-
-A secondary area of study used to better understand how adversaries attack systems and networks.
-
-This is complementary to my primary focus on defensive security rather than my main specialization.
-
-### [`02 🪫 Embedded Forensics Learning`](02 🪫 Embedded Forensics Learning %28IN-CONSTRUCTION%29)
-
-An exploration of embedded systems and the intersection between cybersecurity and physical devices.
-
-This section documents my early learning rather than a completed specialization.
-
-### [`04 📜 Certificates`](05 📜 Certificates)
-
-Certificates and course completions from my ongoing cybersecurity education.
-
-## 『 🔍 What I Am Developing 』
-
-My primary focus is developing the ability to:
-
-* Investigate complex security incidents from incomplete or conflicting evidence
-* Apply networking, operating systems, and security concepts in practical environments
-* Understand how adversaries operate in order to investigate and defend against them
-* Approach unfamiliar technical problems independently
-* Document findings, reasoning, uncertainty, and limitations clearly
-
-This portfolio reflects my progression over time. Older work is retained where it helps demonstrate how my skills have developed.
-
-## 『 📞 Contact & Profiles 』
-
-**TryHackMe:** https://tryhackme.com/p/c1eb
-
-**Email:** [jialeqiu013@gmail.com](mailto:jialeqiu013@gmail.com)
-
-**Discord:** c1eb_13
+## 『 📞 Contacts 』
+TryHackMe Profile: https://tryhackme.com/p/c1eb  
+Discord Username: c1eb_13
+Email: [jialeqiu013@gmail.com](mailto:jialeqiu013@gmail.com)
