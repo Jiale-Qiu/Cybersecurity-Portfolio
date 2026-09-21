@@ -1,6 +1,6 @@
 # The Vantara Leak — DFIR Investigation
 
-A self-directed digital forensics investigation into a simulated compromise of Vantara Financial Group, based on TryHackMe's "The Vantara Leak" room.
+A self-directed digital forensics investigation into a simulated compromise of a fictional company -- Vantara Financial Group, based on TryHackMe's "The Vantara Leak" room.
 
 ## Approach
 
