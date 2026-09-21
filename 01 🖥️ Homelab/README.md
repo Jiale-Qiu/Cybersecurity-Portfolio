@@ -14,3 +14,4 @@ The homelab features the following:
 > Note: The count starts at 4 due to three archived entries before Summer 2026
 
 [Entry 4: Network Revamp](<04 - Network Revamp.md>)
+[Entry 5: Elastic SIEM Installation](<05 - Elastic SIEM Installation (IN PROGRESS).md>)
