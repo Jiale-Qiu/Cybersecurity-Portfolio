@@ -24,8 +24,6 @@ These are projects that best represent my current skills, methodology, and pract
   - [`05 - Elastic SIEM Installation`](<01 🖥️ Homelab/05 - Elastic SIEM Installation %28IN PROGRESS%29.md>) → Set up the Elastic Stack and Elastic EDR across my homelab network
   - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive %28Pre-Summer 2026%29>) → Earlier stages of the homelab preserved for reference
 
-- [`02 🪫 Embedded Forensics Learning`](<02 🪫 Embedded Forensics Learning %28IN-CONSTRUCTION%29>) → Early exploration of embedded systems and the intersection between cybersecurity and physical devices (Likely to stay in-construction for a while)
-
 - [`03 🔷 Defensive Security`](<03 🔷 Defensive Security>) → My primary area of cybersecurity study
 
   - [`01 - Digital Forensics Investigations`](<03 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Detailed DFIR investigations and methodological writeups
