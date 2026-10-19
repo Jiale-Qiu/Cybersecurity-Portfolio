@@ -1,6 +1,6 @@
 # Homelab Entry #4: Network Revamp & Router-on-a-Stick Architecture Implementation
 
-## 『 ⭐ Project overview & Key Outcomes 』
+## 『 ⭐ Project overview 』
 
 In order to secure my Homelab network and better match an enterprise network, I rearchitected my homelab network to move away from a single flat subnet and instead utilize a multi-VLAN Router-on-a-Stick configuration.
 

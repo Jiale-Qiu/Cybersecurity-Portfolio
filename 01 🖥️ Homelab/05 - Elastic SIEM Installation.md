@@ -1,10 +1,19 @@
-# Homelab Entry #4: Elastic SIEM Installation - IN PROGRESS
+# Homelab Entry #4: Elastic SIEM Installation
 
-## 『 ⭐ Project overview & Key Outcomes 』
+## 『 ⭐ Project overview 』
+This section involves installing and configuring the Elastic Stack in my homelab. This includes deploying Elasticsearch, Kibana, Fleet Server, and Elastic Agents onto an air-gapped network.
 
 ### / 💠 Concepts Applied /
+- Elastic Stack: Elasticsearch was installed for log searching and storage, Kibana was installed for data visualization, and Fleet with Elastic Agent and Elastic EDR for basic endpoint visibility
+    - Air-gapped deployment: Deployment of the Elastic Stack required starting a local package registry and workarounds in this air-gapped environment.
+- Firewall Configurations: Opening specific ports to allow communication betwen the Fleet Server and Elastic Agents
+- Endpoint Telemetry: Utilized Sysmon and Elastic Agent Windows Integration to collect data from endpoint
+- Troubleshooting: Diagnosed an unhealthy agent status and identified a routing misconfiguration
 
 ### / 🏆 Core Achievements /
+- Deployed a functional SIEM stack (ELK stack) with agents
+- Ingested Sysmon logs into SIEM
+- Problem-solved to diagnose errors and adapt to the air-gapped environment
 
 ## 『 1️⃣ Installing Elastic 』
 
@@ -111,3 +120,5 @@ After applying the fix, the agent is up and healthy! Awesome! The agent metrics 
 Let's also see if Sysmon is also getting ingested properly. I will open the Voice Recorder app on Windows and then check if the SIEM ingests it. As expected, the event is logged and I am able to filter for it. And with that, I have finished setting up the essential configurations for the Elastic Stack.
 
 Oh yeah, and I DID, in fact, remember to remove the firewall allow rule for port 8080. See? I am very responsible. :>
+
+For my next step, I'll focus on reaching a level of visiblity acceptable for this endpoint. This will be better defined on the next homelab entry.

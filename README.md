@@ -21,7 +21,7 @@ These are projects that best represent my current skills, methodology, and pract
 - [`01 🖥️ Homelab`](<01 🖥️ Homelab>) → Personal homelab used to practice networking, systems administration, security monitoring, and cybersecurity
 
   - [`04 - Network Revamp.md`](<01 🖥️ Homelab/04 - Network Revamp.md>) → Major network redesign using VLANs and Router-on-a-Stick
-  - [`05 - Elastic SIEM Installation`](<01 🖥️ Homelab/05 - Elastic SIEM Installation %28IN PROGRESS%29.md>) → Set up the Elastic Stack and Elastic EDR across my homelab network
+  - [`05 - Elastic SIEM Installation`](<01 🖥️ Homelab/05 - Elastic SIEM Installation.md>) → Set up the Elastic Stack and Elastic EDR across my homelab network
   - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive %28Pre-Summer 2026%29>) → Earlier stages of the homelab preserved for reference
 
 - [`03 🔷 Defensive Security`](<03 🔷 Defensive Security>) → My primary area of cybersecurity study
