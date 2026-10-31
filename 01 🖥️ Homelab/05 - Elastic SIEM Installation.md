@@ -1,4 +1,4 @@
-# Homelab Entry #4: Elastic SIEM Installation
+# Homelab Entry #5: Elastic SIEM Installation
 
 ## 『 ⭐ Project overview 』
 This section involves installing and configuring the Elastic Stack in my homelab. This includes deploying Elasticsearch, Kibana, Fleet Server, and Elastic Agents onto an air-gapped network.
