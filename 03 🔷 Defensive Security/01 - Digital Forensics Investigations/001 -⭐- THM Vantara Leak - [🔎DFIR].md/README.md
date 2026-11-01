@@ -22,7 +22,7 @@ Partway through the investigation, the timeline stopped lining up: Prefetch show
 
 ## Contents
 
-- `vantara-leak.pdf` — Full investigation report (executive summary, timeline, technical analysis, recommendations, IoCs) || Note: Due to failures in GitHub displaying the PDF file, a long JPG has been provided to easily preview the PDF without downloading anything.
+- `vantara-leak.pdf` — Full investigation report (executive summary, timeline, technical analysis, recommendations, IoCs) || Note: A JPG of the PDF is also provided.
 - Investigator notes and working timeline spreadsheet (linked in report appendix, and also underneath)
 
 ## Links
