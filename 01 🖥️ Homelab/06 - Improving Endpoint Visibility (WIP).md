@@ -20,13 +20,14 @@ To avoid high complexity dealing with privacy and data laws, they will not be co
 
 ## T1190 || Initial Access: Exploit Public-Facing Application 
 ### Overview <!-- Goals and Necessary Data Sources -->
+The SIEM currently has zero visibility on the Juice Shop, posing a significant risk as responding to incidents and detecting attackers will be heavily delayed and hindered without proper visibility. The most immediate action is to ingest the Juice Shop's access logs into the SIEM.
 
-### Visibility Before and After
+### Current Visibility
 **Missing.** I do not have visiblity in webserver logs. After clicking around on the Juice Shop, a broad search for GET requests produces no results.
 ![alt text](Images/6/image.png)
 
 ### Configuration Changes
-There is an integration for Apache webserver logs. I install it and aim it towards the relevant juice shop logs. I use 
+I install the Elastic Apache integration and aim it towards the relevant Juice Shop access logs.
 
 ### Simulation
 GET requests seem to now get logged. Awesome. This shows us that the events are coming in normally.
@@ -49,5 +50,7 @@ Now, lets see if I have sufficient data to triage this attack if it were a real 
 - the attacker was successful, as the attacker had a successful sign-in, seen through an HTTP response code 200 (success).
 
 The main information of a brute force attack is collectible, and thus the visibility is acceptable against brute force attacks.
-Unfortunately, I must note that there isn't enough visibility to detect other techniques such as SQL injection. 
+
 ### Findings
+
+The visibility of the Juice Shop has been significantly improved with the ingestions of access logs into the SIEM. It provides important surface-level data for most operations. However, access logs are insufficient for determining POST request bodies, and without a reverse proxy or another solution, a login bypass via SQL injection may look the same as a regular login.
