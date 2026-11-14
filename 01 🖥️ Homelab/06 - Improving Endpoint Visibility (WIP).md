@@ -7,27 +7,27 @@ To avoid high complexity dealing with privacy and data laws, they will not be co
 | ATT&CK Technique | Description | Sources Needed |
 |------------------|-------------|----------------|
 | T1190 | Initial Access: Exploit Public-Facing Application | Webserver Access Logs (Visibility Gap: POST bodies not visible) |
-| T1059 | Execution: Command and Scripting Interpreter | Sysmon (EventID 1), Powershell Operational Log (EventID 4104) |
-| T1112 | Persistence: Modify Registry | Sysmon (EventID 12,13,14) |
-| T1078 | Privilege Escalation: Valid Accounts | Windows Security Logs (EventID 4624, 4625) |
-| T1685.005 | Defense Impairment: Clear Windows Event Logs | Windows Security Logs (EventID 1102), Windows System Logs (EventID 104) |
-| T1003.001 | Credential Access: OS Credential Dumping - LSASS Memory | Sysmon (EventID 10) |
-| T1082 | Discovery: System Information Discovery | Sysmon (EventID 1) |
-| T1560 | Collection: Archive Collected Data | Sysmon (EventID 1) |
-| T1105 | C2: Ingress Tool Transfer | Sysmon (EventID 3, 11), Network Logs |
-| T1048 | Exfiltration: Exfiltration over Alternative Protocol - Exfiltration over Unencrypted Non-C2 protocol (HTTP) | Network Logs, Sysmon (EventID 3) |
-| T1485 | Impact: Data Destruction | Sysmon (EventID 1, 9, 23, 26, 28) |
+| T1059 | Execution: Command and Scripting Interpreter | Sysmon (Event Code 1), PowerShell Operational Log (Event Code 4104) |
+| T1112 | Persistence: Modify Registry | Sysmon (Event Code 12,13,14) |
+| T1078 | Privilege Escalation: Valid Accounts | Windows Security Logs (Event Code 4624, 4625) |
+| T1685.005 | Defense Impairment: Clear Windows Event Logs | Windows Security Logs (Event Code 1102), Windows System Logs (Event Code 104) |
+| T1003.001 | Credential Access: OS Credential Dumping - LSASS Memory | Sysmon (Event Code 10) |
+| T1082 | Discovery: System Information Discovery | Sysmon (Event Code 1) |
+| T1560 | Collection: Archive Collected Data | Sysmon (Event Code 1) |
+| T1105 | C2: Ingress Tool Transfer | Sysmon (Event Code 3, 11), Network Logs |
+| T1048 | Exfiltration: Exfiltration over Alternative Protocol - Exfiltration over Unencrypted Non-C2 protocol (HTTP) | Network Logs, Sysmon (Event Code 3) |
+| T1485 | Impact: Data Destruction | Sysmon (Event Code 1, 9, 23, 26, 28) |
 
 ## T1190 || Initial Access: Exploit Public-Facing Application 
 ### Overview <!-- Goals and Necessary Data Sources -->
 The SIEM currently has zero visibility on the Juice Shop, posing a significant risk as responding to incidents and detecting attackers will be heavily delayed and hindered without proper visibility. The most immediate action is to ingest the Juice Shop's access logs into the SIEM.
 
 ### Current Visibility
-**Missing.** I do not have visiblity in webserver logs. After clicking around on the Juice Shop, a broad search for GET requests produces no results.
-![alt text](Images/6/image.png)
+**Missing 🔴**
+I do not have visiblity in webserver logs. After clicking around on the Juice Shop, a broad search for GET requests in the SIEM produces zero results.
 
 ### Configuration Changes
-I install the Elastic Apache integration and aim it towards the relevant Juice Shop access logs.
+The Juice Shop records GET, POST, and other requests in its access logs. These logs can be ingested into the SIEM using the Elastic Apache integration. I aim the integration towards the relevant Juice Shop access logs.
 
 ### Simulation
 GET requests seem to now get logged. Awesome. This shows us that the events are coming in normally.
@@ -54,3 +54,48 @@ The main information of a brute force attack is collectible, and thus the visibi
 ### Findings
 
 The visibility of the Juice Shop has been significantly improved with the ingestions of access logs into the SIEM. It provides important surface-level data for most operations. However, access logs are insufficient for determining POST request bodies, and without a reverse proxy or another solution, a login bypass via SQL injection may look the same as a regular login.
+
+## T1059 || Execution: Command and Scripting Interpreter
+
+### Overview <!-- Goals and Necessary Data Sources -->
+
+### Current Visibility
+**Needs Tuning 🟣**\
+Testing visibility against T1059 primarily involves using command and scripting interpreters to execute malicious code. On a Windows endpoint, the most relevant command and scripting interpreters would include the Command Prompt, PowerShell, and installed programming languages such as Python.
+
+**Testing PowerShell:**\
+I want to simulate an attacker using `cmd.exe` to execute a Base64-encoded PowerShell command which subsequently runs an executable—Notepad, in this situation. I can use the following command in `cmd.exe`:
+
+`powershell.exe -EncodedCommand "bgBvAHQAZQBwAGEAZAA="`
+
+After executing this, I should have at least three events pop up:
+1. `cmd.exe` opening
+2. `powershell.exe` opening
+3. `notepad.exe` opening
+
+After executing it I look for each associated event.
+
+EventCode 1 gets correctly logged, allowing me to see both the `cmd.exe` and `powershell.exe` events with sufficient information about the process, the user, and its parent.
+
+![alt text](Images/6/image7.png)
+
+However, it appears that to avoid noise, my current configuration of Sysmon did not log the `notepad.exe` opening event. Acceptable, but I will need to take a close look at my Sysmon config to see exactly where my visibility gaps will be with Sysmon.
+
+What concerns me more though is the amount of unnecessary noise my current configuration is generating. Executing the encoded command created 12 Events, most of which are unnecessary.
+
+Primarily, there is an excessive amount of events with Event Code 600, which despite potentially being useful in specific cases, does not provide enough extra data to justify its presence in the logs. In its place however, I will need to log PowerShell Script Block Logging in order, which generates Event Code 4104. This provides high-fidelity information on commands executed in PowerShell—information that Event Code 600 wouldn't tell me.
+
+![alt text](Images/6/image8.png)
+
+Thus, I have three things to do:
+1. Stop ingesting event code 600
+2. Enable Script Block Logging
+3. Check Sysmon configuration
+
+### Configuration Changes
+
+
+### Simulation
+
+
+### Findings
