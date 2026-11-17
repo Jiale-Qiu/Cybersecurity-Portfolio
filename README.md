@@ -1,16 +1,26 @@
-<img src="misc (ignore)/images/01_hero_portfolio_banner_v5_1@2x.png" alt="Cybersecurity Portfolio" width="100%">
+<a href="/">
+  <img src="misc (ignore)/images/01_hero_portfolio_banner_v5_1@2x.png" alt="Cybersecurity Portfolio" width="100%">
+</a>
 
-<img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
+<a href="/">
+  <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
+</a>
 
-<img src="misc (ignore)/images/02_heading_1_template_v5_1@2x.png" alt="About me" width="100%">
+<a href="/">
+  <img src="misc (ignore)/images/02_heading_1_template_v5_1@2x.png" alt="About me" width="100%">
+</a>
 
-## 『 ❓ About Me 』
 - Highschool sophomore attending the Downingtown STEM Academy
 - Focused on Defensive Cybersecurity, particularly **Digital Forensics & Incident Response (DFIR)** and security operations
-- Currently building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles
+- Building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles
 
-## 『 ⭐ Featured Work (Start Here) 』 
+<a href="/">
+  <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
+</a>
 
+<a href="/">
+  <img src="misc (ignore)/images/02_heading_1_template_v5_1@2x(1).png" alt="About me" width="100%">
+</a>
 These are projects that best represent my current skills, methodology, and practical experience.
 
 - [**🔎 THM Vantara Leak — DFIR Investigation**](<03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md>) → My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
