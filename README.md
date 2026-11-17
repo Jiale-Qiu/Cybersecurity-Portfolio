@@ -1,5 +1,7 @@
 <img src="misc (ignore)/images/01_hero_portfolio_banner_v5_1@2x.png" alt="Cybersecurity Portfolio" width="100%">
 
+<img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
+
 <img src="misc (ignore)/images/02_heading_1_template_v5_1@2x.png" alt="About me" width="100%">
 
 ## 『 ❓ About Me 』
