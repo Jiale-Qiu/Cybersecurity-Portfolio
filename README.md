@@ -7,7 +7,7 @@
 </a>
 
 <a href="/">
-  <img src="misc (ignore)/images/02_heading_1_template_v5_1@2x.png" alt="About me" width="100%">
+  <img src="misc (ignore)/images/02_heading_1_about_me.png" alt="About me" width="100%">
 </a>
 
 - Highschool sophomore attending the Downingtown STEM Academy
@@ -19,16 +19,30 @@
 </a>
 
 <a href="/">
-  <img src="misc (ignore)/images/02_heading_1_template_v5_1@2x(1).png" alt="About me" width="100%">
+  <img src="misc (ignore)/images/02_heading_1_featured_work.png" alt="Featured Work" width="100%">
 </a>
-These are projects that best represent my current skills, methodology, and practical experience.
 
-- [**🔎 THM Vantara Leak — DFIR Investigation**](<03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md>) → My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
+<a href="/">
+  <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="70%">
+</a>
 
-- [**🖥️ Homelab**](<01 🖥️ Homelab>) → A security-focused homelab built from the ground up to apply networking, systems, and defensive security concepts in a practical environment
+My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
 
-- [**🏆 National Cyber League**](<03 🔷 Defensive Security/I - National Cyber League.md>) → Competition results demonstrating my performance against other highschool and university students across a broad range of cybersecurity challenges
+<a href="/">
+  <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="70%">
+</a>
 
+A security-focused homelab built from the ground up to apply networking, systems, and defensive security concepts in a practical environment
+
+<a href="/">
+  <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="70%">
+</a>
+
+Competition results demonstrating my performance against other highschool and university students across a broad range of cybersecurity challenges
+
+<a href="/">
+  <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
+</a>
 
 ## 『 🏗️ Github Structure Overview 』
 
