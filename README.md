@@ -23,19 +23,19 @@
 </a>
 
 <a href="/">
-  <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="70%">
+  <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
 My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
 
 <a href="/">
-  <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="70%">
+  <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
 A security-focused homelab built from the ground up to apply networking, systems, and defensive security concepts in a practical environment
 
 <a href="/">
-  <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="70%">
+  <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
 Competition results demonstrating my performance against other highschool and university students across a broad range of cybersecurity challenges
