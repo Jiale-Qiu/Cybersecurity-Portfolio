@@ -1,7 +1,7 @@
 # Cybersecurity Portfolio
 
 ## 『 ❓ About Me 』
-- Highschool sophomore attending the Downingtown STEM Academy
+- Highschool student attending the Downingtown STEM Academy
 - Focused on Defensive Cybersecurity, particularly **Digital Forensics & Incident Response (DFIR)** and security operations
 - Currently building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles
 
