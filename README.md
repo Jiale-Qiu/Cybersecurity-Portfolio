@@ -10,9 +10,27 @@
   <img src="misc (ignore)/images/02_heading_1_about_me.png" alt="About me" width="100%">
 </a>
 
-- Highschool student attending the Downingtown STEM Academy
-- Focused on Defensive Cybersecurity, particularly **Digital Forensics & Incident Response (DFIR)** and security operations
-- Building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles
+<a href="/">
+  <img src="misc (ignore)/images/04_heading_3_background_focus.png" alt="About me" width="100%">
+</a>
+
+I'm Jiale Qiu, a highschool student at the Downingtown STEM Academy who's focused on defensive cybersecurity, more specifically, Digital Forensics & Incident Response (DFIR) and Security Operations (SOC).
+
+I develop and practice my skills through a personal homelab along with defensive challenges found on TryHackMe and HackTheBox. I excel best at Windows forensics, but can also pivot to other areas such as network analysis or Linux if needed.
+
+I'm building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles.
+
+<a href="/">
+  <img src="misc (ignore)/images/04_heading_3_howiwork.png" alt="About me" width="100%">
+</a>
+
+I enjoy being like a detective, investigating and uncovering stories as I dig through artifacts. Formulating hypotheses and being able to continuously build my findings makes each step meaningful, but also more important. I put great importance in methodology and solid reasoning.
+
+<a href="/">
+  <img src="misc (ignore)/images/04_heading_3_outsideofcybersec.png" alt="About me" width="100%">
+</a>
+
+Outside of Cybersecurity, I enjoy watching F1, simracing and playing Warframe.
 
 <a href="/">
   <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
@@ -22,19 +40,19 @@
   <img src="misc (ignore)/images/02_heading_1_featured_work.png" alt="Featured Work" width="100%">
 </a>
 
-<a href="/">
+<a href="03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md">
   <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
 My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
 
-<a href="/">
+<a href="01 🖥️ Homelab">
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
 A security-focused homelab built from the ground up to apply networking, systems, and defensive security concepts in a practical environment
 
-<a href="/">
+<a href="03 🔷 Defensive Security/I - National Cyber League.md">
   <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
