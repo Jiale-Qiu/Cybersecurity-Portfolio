@@ -10,7 +10,7 @@
   <img src="misc (ignore)/images/02_heading_1_about_me.png" alt="About me" width="100%">
 </a>
 
-- Highschool sophomore attending the Downingtown STEM Academy
+- Highschool student attending the Downingtown STEM Academy
 - Focused on Defensive Cybersecurity, particularly **Digital Forensics & Incident Response (DFIR)** and security operations
 - Building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles
 
@@ -44,39 +44,22 @@ Competition results demonstrating my performance against other highschool and un
   <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
 </a>
 
-## 『 🏗️ Github Structure Overview 』
+<a href="/">
+  <img src="misc (ignore)/images/contacts/contact.png" alt="About me" width="100%">
+</a>
 
-- [`01 🖥️ Homelab`](<01 🖥️ Homelab>) → Personal homelab used to practice networking, systems administration, security monitoring, and cybersecurity
-
-  - [`04 - Network Revamp.md`](<01 🖥️ Homelab/04 - Network Revamp.md>) → Major network redesign using VLANs and Router-on-a-Stick
-  - [`05 - Elastic SIEM Installation`](<01 🖥️ Homelab/05 - Elastic SIEM Installation.md>) → Set up the Elastic Stack and Elastic EDR across my homelab network
-  - [`Archive (Pre-Summer 2026)`](<01 🖥️ Homelab/Archive %28Pre-Summer 2026%29>) → Earlier stages of the homelab preserved for reference
-
-- [`03 🔷 Defensive Security`](<03 🔷 Defensive Security>) → My primary area of cybersecurity study
-
-  - [`01 - Digital Forensics Investigations`](<03 🔷 Defensive Security/01 - Digital Forensics Investigations>) → Detailed DFIR investigations and methodological writeups
-  - [`02 - SOC Simulations`](<03 🔷 Defensive Security/02 - SOC Simulations>) → TryHackMe SOC simulations and defensive investigations
-  - [`99 - Other Defensive CTFs`](<03 🔷 Defensive Security/99 - Other Defensive CTFs>) → Additional defensive CTFs and shorter writeups
-  - [`I - National Cyber League.md`](<03 🔷 Defensive Security/I - National Cyber League.md>) → NCL competition history and results
-
-- [`04 🔺 Offensive Security`](<04 🔺 Offensive Security>) → A secondary area of study used to better understand how adversaries attack networks and endpoints
-
-- [`05 📜 Certificates`](<05 📜 Certificates>) → Certificates and course completions from my cybersecurity education
-
-
-## 『 🔍 What I Am Developing 』
-
-* Evidence-based investigation and analytical reasoning
-* Practical networking, systems, and cybersecurity skills
-* Understanding adversary behavior to improve defensive investigations
-* Independent problem solving and technical research
-* Clear documentation of findings, reasoning, uncertainty, and limitations
-
-## 『 📝 Notes 』
-
-This portfolio documents my progression over time alongside completed projects, investigations, competitions, and ongoing areas of study.
-
-## 『 📞 Contacts 』
-TryHackMe Profile: https://tryhackme.com/p/c1eb\
-Discord Username: c1eb_13\
-Email: [jialeqiu013@gmail.com](mailto:jialeqiu013@gmail.com)\
+<p align="center">
+  <a href="https://tryhackme.com/p/c1eb" title="Click to open TryHackMe profile (c1eb)">
+    <img src="misc (ignore)/images/contacts/contact_01_tryhackme.png" alt="TryHackMe: c1eb — Click to open profile" width="49%" />
+  </a>
+  <a href="https://www.linkedin.com/in/qiujiale/" title="Click to connect on LinkedIn (Jiale Qiu)">
+    <img src="misc (ignore)/images/contacts/contact_02_linkedin.png" alt="LinkedIn: Jiale Qiu — Click to connect" width="49%" />
+  </a>
+  <br />
+  <a href="mailto:jialeqiu013@gmail.com" title="Click to send email to jialeqiu013@gmail.com">
+    <img src="misc (ignore)/images/contacts/contact_03_email.png" alt="Email: jialeqiu013@gmail.com — Click to send email" width="49%" />
+  </a>
+  <a href="https://discord.com/users/1280628975915499584" title="Click to open Discord profile (c1eb_13)">
+    <img src="misc (ignore)/images/contacts/contact_04_discord.png" alt="Discord: c1eb_13 — Click to open Discord" width="49%" />
+  </a>
+</p>
