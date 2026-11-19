@@ -44,19 +44,22 @@ Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
   <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
-My **most thorough DFIR investigation** of a simulated attack, complete with a **final report** and full investigator notes. With **zero guided help** from the challenge's questions, I reconstructed a full incident timeline with only a KAPE triage and context.
+My [**most thorough DFIR investigation**][vleak folder] of a simulated attack, complete with a [**final report**][vleak report] and full investigator notes. With **zero guided help** from the challenge's questions, I reconstructed a full incident timeline with only a KAPE triage and context.
 
 Through the formulation of hypotheses, I uncovered each step of the attack, first catching an inital payload drop via SMB, followed by execution and the tracing of a staged payload, and ultimately identifying masqueraded persistence mechanisms and exfiltration.
 
 Throughout the investigation, I also uncovered a moment where the clock moved backwards by 12 minutes—something that went beyond what I've learned in theory. Through adapting and investigating Windows Time Service logs, I uncovered a deviation between windows tick count and system clock time.
 
-The **full pdf report** can be found in the Vantara Leak folder.
+The [**full pdf report**][vleak report] can be found in the Vantara Leak folder.
+
+[vleak folder]: <03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md>
+[vleak report]: <03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md/vantara-leak.pdf>
 
 <a href="01 🖥️ Homelab">
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
-A security-focused homelab built from the ground up to apply networking, systems, and defensive security concepts in a practical environment
+My homelab, powered by physical hardware (literally hands-on). Using OPNSense and a managed switch, this Router-on-a-Stick (RoaS) network manages VLAN segmentation with 802.1Q tagging. 
 
 <a href="03 🔷 Defensive Security/I - National Cyber League.md">
   <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
