@@ -14,23 +14,23 @@
   <img src="misc (ignore)/images/04_heading_3_background_focus.png" alt="About me" width="100%">
 </a>
 
-I'm Jiale Qiu, a highschool student at the Downingtown STEM Academy who's focused on defensive cybersecurity, more specifically, Digital Forensics & Incident Response (DFIR) and Security Operations (SOC).
+I'm Jiale Qiu, a high school student at the Downingtown STEM Academy who's focused on defensive cybersecurity, more specifically, **Digital Forensics & Incident Response (DFIR)** and **Security Operations (SOC)**.
 
-I develop and practice my skills through a personal homelab along with defensive challenges found on TryHackMe and HackTheBox. I excel best at Windows forensics, but can also pivot to other areas such as network analysis or Linux if needed.
+I develop and practice my skills through a personal **homelab** along with defensive challenges found on TryHackMe and HackTheBox. I excel at **Windows forensics** but can also pivot to other areas, such as **network analysis** or **Linux**, if needed.
 
-I'm building toward future cybersecurity internship opportunities, with a particular interest in DFIR and blue-team roles.
+I'm building toward future cybersecurity **internship** opportunities, with a particular interest in DFIR and blue-team roles.
 
 <a href="/">
   <img src="misc (ignore)/images/04_heading_3_howiwork.png" alt="About me" width="100%">
 </a>
 
-I enjoy being like a detective, investigating and uncovering stories as I dig through artifacts. Formulating hypotheses and being able to continuously build my findings makes each step meaningful, but also more important. I put great importance in methodology and solid reasoning.
+I enjoy being like a detective, investigating and uncovering stories as I dig through artifacts. Formulating hypotheses and continuously building on my findings makes each step meaningful and important. I place great importance on methodology and solid reasoning.
 
 <a href="/">
   <img src="misc (ignore)/images/04_heading_3_outsideofcybersec.png" alt="About me" width="100%">
 </a>
 
-Outside of Cybersecurity, I enjoy watching F1, simracing and playing Warframe.
+Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
 
 <a href="/">
   <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
