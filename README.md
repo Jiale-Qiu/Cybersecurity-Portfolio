@@ -44,7 +44,13 @@ Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
   <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
-My most substantial DFIR investigation of a fictional financial company, involving timeline reconstruction, artifact correlation, evidence limitations, persistence, lateral movement, and data collection
+My most thorough DFIR investigation of a simulated attack, complete with a final report and full investigator notes. With **zero guided help** from the challenge's questions, I reconstructed a full incident timeline with only a KAPE triage and context.
+
+Through the formulation of hypothesis, I uncovered each step of the attack, first catching an inital payload drop via SMB, followed by execution and the tracing of a staged payload, and ultimately identifying masqueraded persistence mechanisms and exfiltration.
+
+Throughout the investigation, I also uncovered a moment where the clock moved backwards by 12 minutes—something that went beyond what I've learned in theory. Through adapting and investigating Windows Time Service logs, I uncovered a deviation between windows tick count and system clock time.
+
+The **full pdf report** can be found in the Vantara Leak folder.
 
 <a href="01 🖥️ Homelab">
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">

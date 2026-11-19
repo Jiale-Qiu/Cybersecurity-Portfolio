@@ -1,5 +1,6 @@
-# Homelab
-September 6, 2025 - Present
+<a href="./">
+  <img src="./Images/homelab_hero_banner.png" alt="Cybersecurity Portfolio" width="100%">
+</a>
 
 ## 『 💫 Overview 』
 Welcome to my homelab documentation. My homelab is/will be a multi-year hands-on practical project that demonstrates my competency in IT and cybersecurity. This homelab assists with briding the gap between theory and true understanding.
