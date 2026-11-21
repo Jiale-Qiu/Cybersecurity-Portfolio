@@ -9,15 +9,10 @@ To avoid high complexity dealing with privacy and data laws, they will not be co
 | T1190 | Initial Access: Exploit Public-Facing Application | Webserver Access Logs (Visibility Gap: POST bodies not visible) |
 | T1059 | Execution: Command and Scripting Interpreter | Sysmon (Event Code 1), PowerShell Operational Log (Event Code 4104) |
 | T1112 | Persistence: Modify Registry | Sysmon (Event Code 12,13,14) |
-| T1078 | Privilege Escalation: Valid Accounts | Windows Security Logs (Event Code 4624, 4625) |
 | T1685.005 | Defense Impairment: Clear Windows Event Logs | Windows Security Logs (Event Code 1102), Windows System Logs (Event Code 104) |
-| T1003.001 | Credential Access: OS Credential Dumping - LSASS Memory | Sysmon (Event Code 10) |
 | T1082 | Discovery: System Information Discovery | Sysmon (Event Code 1) |
 | T1560 | Collection: Archive Collected Data | Sysmon (Event Code 1) |
-| T1105 | C2: Ingress Tool Transfer | Sysmon (Event Code 3, 11), Network Logs |
 | T1048 | Exfiltration: Exfiltration over Alternative Protocol - Exfiltration over Unencrypted Non-C2 protocol (HTTP) | Network Logs, Sysmon (Event Code 3) |
-| T1485 | Impact: Data Destruction | Sysmon (Event Code 1, 9, 23, 26, 28) |
-
 ## T1190 || Initial Access: Exploit Public-Facing Application 
 ### Overview <!-- Goals and Necessary Data Sources -->
 The SIEM currently has zero visibility on the Juice Shop, posing a significant risk as responding to incidents and detecting attackers will be heavily delayed and hindered without proper visibility. The most immediate action is to ingest the Juice Shop's access logs into the SIEM.
@@ -51,13 +46,14 @@ Now, lets see if I have sufficient data to triage this attack if it were a real 
 
 The main information of a brute force attack is collectible, and thus the visibility is acceptable against brute force attacks.
 
-### Findings
+### Conclusion
 
 The visibility of the Juice Shop has been significantly improved with the ingestions of access logs into the SIEM. It provides important surface-level data for most operations. However, access logs are insufficient for determining POST request bodies, and without a reverse proxy or another solution, a login bypass via SQL injection may look the same as a regular login.
 
 ## T1059 || Execution: Command and Scripting Interpreter
 
 ### Overview <!-- Goals and Necessary Data Sources -->
+Although Sysmon is installed, I do not know the full extent of its current configuration. Many log sources are in their default configuration, which are typically less than ideal. In order to detect T1059 and properly investigate it, I will need data from multiple sources, primarily Sysmon and PowerShell logs.
 
 ### Current Visibility
 **Needs Tuning 🟣**\
@@ -93,9 +89,54 @@ Thus, I have three things to do:
 3. Check Sysmon configuration
 
 ### Configuration Changes
+I can't disable event code 600 without disabling the entire log channel, so I'll have to exclude it from ingestion in the Windows integration in Elastic. Alongside code 600, I also exclude code 403 and 800 to cut down on storage consumption, as Script Block Logging and Sysmon should be enough for my purposes.
+
+![alt text](Images/6/image9.png)
+
+Currently, Powershell only does Script Block Logging for commands it deems suspicious. An attacker can fairly easily bypass this, so I want it to log every event. For full visibility, I will need to make sure both Event Code 4103 and 4104 are active. Both Event Codes work together simultaneously for maximum coverage.
+
+Using the help of AI, I'll need to run three different sets of commands. Of course, when it comes to commands its best to know what each does.
+
+```
+$sb = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging"
+New-Item -Path $sb -Force | Out-Null
+Set-ItemProperty -Path $sb -Name EnableScriptBlockLogging -Value 1 -Type DWord
+```
+
+This first set of commands saves a registry path to a variable `sb`, and creates a new registry key with it. Afterwards, it adds a new value named `EnableScriptBlockLogging` and sets it to 1 (enables it).
+
+```
+$ml = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ModuleLogging"
+New-Item -Path "$ml\ModuleNames" -Force | Out-Null
+Set-ItemProperty -Path $ml -Name EnableModuleLogging -Value 1 -Type DWord
+Set-ItemProperty -Path "$ml\ModuleNames" -Name "*" -Value "*" -Type String
+```
+
+This second set of commands also does something similar, except it forms two values.
+
+```
+wevtutil sl "Microsoft-Windows-PowerShell/Operational" /ms:536870912   # 512 MB
+```
+
+Finally, this third command increases the size of the Powershell log file, as Event Code 4103 and 4104 use a fair bit of a space.
+
+After executing the commands, Script Block Logging and Module Logging should be fully enabled.
+
+Finally, the last thing I want to do is get a better Sysmon configuration. Sysmon's default configuration is not great, so I'll download a config file from [online](https://github.com/olafhartong/sysmon-modular/releases/tag/configs-a45dedb13a43) to use, although I won't tune it for the environment as of now.
 
 
 ### Simulation
+Finally, to test if the changes worked. This time, I'll run two commands: the same one as previously, and also a more benign command.
 
+`powershell.exe -EncodedCommand "bgBvAHQAZQBwAGEAZAA="`
 
-### Findings
+Unfortunately, event Code 600 and similar continued to appear despite the agent reporting itself is up-to-date with the newest version. After a half-hour of debugging, I found the root cause: the agent's tracked policy revision number was greater than the fleet server's, meaning the agent believed that it had a newer version than the server, causing it to refuse updates. While quirky, the fix was fairly simple: repeatedly make small changes to the fleet server's policy until the revision number exceeded that of the agent's, which finally led the agent to realize it's outdated and prompting an update.
+
+After the fixes, the event codes 403, 600, and 800 no longer appear. Compared to the previous 12 events, this time only 5 events were logged, meaning that my changes are working as intended.
+
+![alt text](Images/6/image10.png)
+
+![alt text](Images/6/image12.png)
+
+### Conclusion
+With these changes, I have greatly improved visibility in PowerShell and have also cut out a fair amount of noise.
