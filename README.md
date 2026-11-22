@@ -1,17 +1,17 @@
-<a href="/">
+<a href="./">
   <img src="misc (ignore)/images/01_hero_portfolio_banner_v5_1@2x.png" alt="Cybersecurity Portfolio" width="100%">
 </a>
 
-<a href="/">
+<a href="./">
   <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
 </a>
 
-<a href="/">
+<a href="./">
   <img src="misc (ignore)/images/02_heading_1_about_me.png" alt="About me" width="100%">
 </a>
 
-<a href="/">
-  <img src="misc (ignore)/images/04_heading_3_background_focus.png" alt="About me" width="100%">
+<a href="./">
+  <img src="misc (ignore)/images/04_heading_3_background_focus.png" alt="background focus" width="100%">
 </a>
 
 I'm Jiale Qiu, a high school student at the Downingtown STEM Academy who's focused on defensive cybersecurity, more specifically, **Digital Forensics & Incident Response (DFIR)** and **Security Operations (SOC)**.
@@ -20,27 +20,27 @@ I develop and practice my skills through a personal **homelab** along with defen
 
 I'm building toward future cybersecurity **internship** opportunities, with a particular interest in DFIR and blue-team roles.
 
-<a href="/">
-  <img src="misc (ignore)/images/04_heading_3_howiwork.png" alt="About me" width="100%">
+<a href="./">
+  <img src="misc (ignore)/images/04_heading_3_howiwork.png" alt="how I work" width="100%">
 </a>
 
 I enjoy being like a detective, investigating and uncovering stories as I dig through artifacts. Formulating hypotheses and continuously building on my findings makes each step meaningful and important. I place great importance on methodology and solid reasoning.
 
-<a href="/">
-  <img src="misc (ignore)/images/04_heading_3_outsideofcybersec.png" alt="About me" width="100%">
+<a href="./">
+  <img src="misc (ignore)/images/04_heading_3_outsideofcybersec.png" alt="outside of cybersec" width="100%">
 </a>
 
 Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
 
-<a href="/">
+<a href="./">
   <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
 </a>
 
-<a href="/">
+<a href="./">
   <img src="misc (ignore)/images/02_heading_1_featured_work.png" alt="Featured Work" width="100%">
 </a>
 
-<a href="03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md">
+<a href="03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md">
   <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
@@ -52,27 +52,51 @@ Throughout the investigation, I also uncovered a moment where the clock moved ba
 
 The [**full pdf report**][vleak report] can be found in the Vantara Leak folder.
 
-[vleak folder]: <03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md>
-[vleak report]: <03 🔷 Defensive Security/01 - Digital Forensics Investigations/001 -⭐- THM Vantara Leak - [🔎DFIR].md/vantara-leak.pdf>
+[vleak folder]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md>
+[vleak report]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md/vantara-leak.pdf>
 
 <a href="01 🖥️ Homelab">
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
-My homelab, powered by physical hardware (literally hands-on). Using OPNSense and a managed switch, this Router-on-a-Stick (RoaS) network manages VLAN segmentation with 802.1Q tagging. 
+My homelab, powered by both physical  hardware and virtual machines. Using OPNSense and a managed switch, this Router-on-a-Stick (RoaS) network manages three VLANs (DMZ, Security, Simulated Internet) using segmentation with 802.1Q tagging.
 
-<a href="03 🔷 Defensive Security/I - National Cyber League.md">
+The homelab runs an intentionally vulnerable webserver, where the bulk of operations resides. I run simulated attacks against it and use the Elastic Stack and SIEM to monitor and improve visibility on it. Notably, my most recent entry includes the simulation of six different MITRE ATT&CK techniques against the webserver and what I did to remediate gaps in visibility. You can [view the entry **here**][entry6]
+
+[entry6]: <01 🖥️ Homelab/06 - Improving Endpoint Visibility.md>
+
+<a href="03 🔷 Defensive Security/20 - National Cyber League/README.md">
   <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
-Competition results demonstrating my performance against other highschool and university students across a broad range of cybersecurity challenges
+The National Cyber League (NCL) is a nationwide cybersecurity competition across the United States and Canada for high school and college students, with hands-on challenges in areas like forensics, log analysis, network traffic analysis, web exploitation and cryptography. It runs semiannually, with thousands of students participating and competeing each season.
 
-<a href="/">
+Placed **305th out of 7,010 players (96th percentile)** in the NCL Spring 2026 Individual Game, scoring 2,735 of 3,000 points. Perfect scores in five of nine categories, with full marks in Log Analysis and Network Traffic Analysis, and 97th percentile in Forensics.
+
+You can view the [report of my 2026 Spring performance **here**][spring-2026-report] and [verify my scorecard **here**](https://cyberskyline.com/report/3FFUPF7Q2XJ1).
+
+[spring-2026-report]: <03 🔷 Defensive Security/20 - National Cyber League/NCL Spring 2026 Individual Game Scouting Report - Jiale Qiu - Cyber Skyline Report.pdf>
+
+<a href="./">
   <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
 </a>
 
-<a href="/">
-  <img src="misc (ignore)/images/contacts/contact.png" alt="About me" width="100%">
+<a href="./">
+  <img src="misc (ignore)/images/02_heading_1_miscwork.png" alt="misc. work" width="100%">
+</a>
+
+<a href="03 🔷 Defensive Security/30 - Digital Forensics Investigations">
+  <img src="misc (ignore)/images/03_heading_2_dfirinvestigations.png" alt="dfir investigations" width="85%">
+</a>
+
+A collection of HackTheBox Sherlocks and TryHackMe defensive challenges for me to practice and hone my skills. Throughout these entries, I analyze and investigate Linux and Windows endpoints, reconstructing attacker timelines and malicious behavior.
+
+<a href="./">
+  <img src="misc (ignore)/images/03_glitch_divider_v5_1@2x.png" alt="divider" width="100%">
+</a>
+
+<a href="./">
+  <img src="misc (ignore)/images/contacts/contact.png" alt="contact me" width="100%">
 </a>
 
 <p align="center">
