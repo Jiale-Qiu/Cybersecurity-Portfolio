@@ -59,7 +59,7 @@ The [**full PDF report**][vleak report] can be found in the Vantara Leak folder.
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
-My homelab, powered by both physical  hardware and virtual machines. Using OPNsense and a managed switch, this Router-on-a-Stick (RoaS) network manages three VLANs (DMZ, Security, Simulated Internet) using segmentation with 802.1Q tagging.
+My homelab, powered by both physical hardware and virtual machines. Using OPNsense and a managed switch, this Router-on-a-Stick (RoaS) network manages three VLANs (DMZ, Security, Simulated Internet) using segmentation with 802.1Q tagging.
 
 The homelab runs an intentionally vulnerable web server, where the bulk of operations resides. I run simulated attacks against it and use the Elastic Stack and SIEM to monitor and improve visibility on it. Notably, my most recent entry includes the simulation of six different MITRE ATT&CK techniques against the web server and what I did to remediate gaps in visibility. You can [view the entry **here**][entry6]
 
@@ -69,7 +69,7 @@ The homelab runs an intentionally vulnerable web server, where the bulk of opera
   <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
-The National Cyber League (NCL) is a nationwide cybersecurity competition across the United States and Canada for high school and college students, with hands-on challenges in areas like forensics, log analysis, network traffic analysis, web exploitation and cryptography. It runs semiannually, with thousands of students participating and competing each season.
+The National Cyber League (NCL) is a nationwide cybersecurity competition across the United States and Canada for high school and college students, with hands-on challenges in areas like forensics, log analysis, network traffic analysis, web exploitation, and cryptography. It runs semiannually, with thousands of students participating and competing each season.
 
 Placed **305th out of 7,010 players (96th percentile)** in the NCL Spring 2026 Individual Game, scoring 2,735 of 3,000 points. Perfect scores in five of nine categories, with full marks in Log Analysis and Network Traffic Analysis, and 97th percentile in Forensics.
 
