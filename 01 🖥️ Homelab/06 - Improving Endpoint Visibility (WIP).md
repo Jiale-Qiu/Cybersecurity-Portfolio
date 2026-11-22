@@ -140,3 +140,45 @@ After the fixes, the event codes 403, 600, and 800 no longer appear. Compared to
 
 ### Conclusion
 With these changes, I have greatly improved visibility in PowerShell and have also cut out a fair amount of noise.
+
+## T1112 || Persistence: Modify Registry
+
+### Overview <!-- Goals and Necessary Data Sources -->
+Modifying the registry is a common way to establish persistence on a machine, so ensuring that my SIEM can detect it is imperative.
+
+### Current Visibility
+**Acceptable 🟢**\
+The most straightforward way to implant persistence is through the registry run keys, which will be our main target for this simulation. Using the windows `cmd.exe`, I will use `reg.exe` to plant a registry key that executes `notepad.exe` on startup.
+
+I run the following command to set up the persistence mechanism:
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "Secret Persistence" /t REG_SZ /d "\"C:\Windows\System32\notepad.exe\"" /f
+```
+
+Four events appear, two of which are from Sysmon, and the other two I'm assuming come from Elastic EDR. From Sysmon's event code 13, I can find a deep amount of information for the added registry key, including the name and location of the key (HKU\\...\Run\Secret Persistence), details of the key (C:\Windows\System32\notepad.exe), and even the process ID (4772). There is enough visibility already.
+
+![alt text](Images/6/image13.png)
+
+### Conclusion
+No changes are needed.
+
+## T1685.005 || Defense Impairment: Clear Windows Event Logs
+
+### Overview <!-- Goals and Necessary Data Sources -->
+
+### Current Visibility
+
+In order to test visibility against this, I will clear the Windows System and Security logs using the command `Clear-EventLog -LogName System, Security`. Unforunately, once I run it, no results return.
+
+![alt text](Images/6/image14.png)
+
+### Configuration Changes
+
+With some research, it appears that the `System` integration is missing from my Elastic policy. The System integration logs the essential system logs, including `Application`, `System`, and `Security`. It's surprising I didn't have this; this shows how important it is to thoroughly check visibility. I add the integration into my policy and save the changes.
+
+### Simulation
+
+Running the same exact command as before
+![alt text](Images/6/image16.png)
+
+### Conclusion
