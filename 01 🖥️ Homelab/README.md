@@ -4,7 +4,7 @@
 
 ## 『 💫 Overview 』
 Welcome to my homelab documentation. My homelab is/will be a multi-year hands-on practical project that demonstrates my competency in IT and cybersecurity. This homelab assists with briding the gap between theory and true understanding.
-
+Remove-Item -Recurse -Force Cybersecurity-Portfolio
 The homelab features the following:
 - Router-on-a-Stick (RoaS) setup
 - Segmentation with VLANs and 802.1Q tagging
