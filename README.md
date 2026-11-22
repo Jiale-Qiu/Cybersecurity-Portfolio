@@ -65,7 +65,7 @@ The homelab runs an intentionally vulnerable webserver, where the bulk of operat
 
 [entry6]: <01 🖥️ Homelab/06 - Improving Endpoint Visibility.md>
 
-<a href="03 🔷 Defensive Security/20 - National Cyber League/README.md">
+<a href="03 🔷 Defensive Security/20 - National Cyber League">
   <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
