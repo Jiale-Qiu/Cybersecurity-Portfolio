@@ -46,11 +46,11 @@ Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
 
 My [**most thorough DFIR investigation**][vleak folder] of a simulated attack, complete with a [**final report**][vleak report] and full investigator notes. With **zero guided help** from the challenge's questions, I reconstructed a full incident timeline with only a KAPE triage and context.
 
-Through the formulation of hypotheses, I uncovered each step of the attack, first catching an inital payload drop via SMB, followed by execution and the tracing of a staged payload, and ultimately identifying masqueraded persistence mechanisms and exfiltration.
+Through the formulation of hypotheses, I uncovered each step of the attack, first catching an initial payload drop via SMB, followed by execution and the tracing of a staged payload, and ultimately identifying masqueraded persistence mechanisms and exfiltration.
 
-Throughout the investigation, I also uncovered a moment where the clock moved backwards by 12 minutes—something that went beyond what I've learned in theory. Through adapting and investigating Windows Time Service logs, I uncovered a deviation between windows tick count and system clock time.
+Throughout the investigation, I also uncovered a moment where the clock moved backwards by 12 minutes—something that went beyond what I've learned in theory. By adapting and investigating Windows Time Service logs, I uncovered a deviation between Windows tick count and system clock time.
 
-The [**full pdf report**][vleak report] can be found in the Vantara Leak folder.
+The [**full PDF report**][vleak report] can be found in the Vantara Leak folder.
 
 [vleak folder]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md>
 [vleak report]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md/vantara-leak.pdf>
@@ -59,9 +59,9 @@ The [**full pdf report**][vleak report] can be found in the Vantara Leak folder.
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
-My homelab, powered by both physical  hardware and virtual machines. Using OPNSense and a managed switch, this Router-on-a-Stick (RoaS) network manages three VLANs (DMZ, Security, Simulated Internet) using segmentation with 802.1Q tagging.
+My homelab, powered by both physical  hardware and virtual machines. Using OPNsense and a managed switch, this Router-on-a-Stick (RoaS) network manages three VLANs (DMZ, Security, Simulated Internet) using segmentation with 802.1Q tagging.
 
-The homelab runs an intentionally vulnerable webserver, where the bulk of operations resides. I run simulated attacks against it and use the Elastic Stack and SIEM to monitor and improve visibility on it. Notably, my most recent entry includes the simulation of six different MITRE ATT&CK techniques against the webserver and what I did to remediate gaps in visibility. You can [view the entry **here**][entry6]
+The homelab runs an intentionally vulnerable web server, where the bulk of operations resides. I run simulated attacks against it and use the Elastic Stack and SIEM to monitor and improve visibility on it. Notably, my most recent entry includes the simulation of six different MITRE ATT&CK techniques against the web server and what I did to remediate gaps in visibility. You can [view the entry **here**][entry6]
 
 [entry6]: <01 🖥️ Homelab/06 - Improving Endpoint Visibility.md>
 
@@ -69,7 +69,7 @@ The homelab runs an intentionally vulnerable webserver, where the bulk of operat
   <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
-The National Cyber League (NCL) is a nationwide cybersecurity competition across the United States and Canada for high school and college students, with hands-on challenges in areas like forensics, log analysis, network traffic analysis, web exploitation and cryptography. It runs semiannually, with thousands of students participating and competeing each season.
+The National Cyber League (NCL) is a nationwide cybersecurity competition across the United States and Canada for high school and college students, with hands-on challenges in areas like forensics, log analysis, network traffic analysis, web exploitation and cryptography. It runs semiannually, with thousands of students participating and competing each season.
 
 Placed **305th out of 7,010 players (96th percentile)** in the NCL Spring 2026 Individual Game, scoring 2,735 of 3,000 points. Perfect scores in five of nine categories, with full marks in Log Analysis and Network Traffic Analysis, and 97th percentile in Forensics.
 
