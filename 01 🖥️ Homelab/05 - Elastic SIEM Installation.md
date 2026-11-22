@@ -1,19 +1,18 @@
 # Homelab Entry #5: Elastic SIEM Installation
 
-## 『 ⭐ Project overview 』
-This section involves installing and configuring the Elastic Stack in my homelab. This includes deploying Elasticsearch, Kibana, Fleet Server, and Elastic Agents onto an air-gapped network.
+I set up a working SIEM stack on an air-gapped homelab network: Elasticsearch, Kibana, Fleet Server and Elastic Agents, with Sysmon and Elastic Defend collecting telemetry from a Windows endpoint. Because the network was air-gapped and had no internet access, I had to work around every step that normally pulls from the web.
 
-### / 💠 Concepts Applied /
-- Elastic Stack: Elasticsearch was installed for log searching and storage, Kibana was installed for data visualization, and Fleet with Elastic Agent and Elastic EDR for basic endpoint visibility
-    - Air-gapped deployment: Deployment of the Elastic Stack required starting a local package registry and workarounds in this air-gapped environment.
-- Firewall Configurations: Opening specific ports to allow communication betwen the Fleet Server and Elastic Agents
-- Endpoint Telemetry: Utilized Sysmon and Elastic Agent Windows Integration to collect data from endpoint
-- Troubleshooting: Diagnosed an unhealthy agent status and identified a routing misconfiguration
+What I did and found:
 
-### / 🏆 Core Achievements /
-- Deployed a functional SIEM stack (ELK stack) with agents
-- Ingested Sysmon logs into SIEM
-- Problem-solved to diagnose errors and adapt to the air-gapped environment
+Hosted a local Elastic Package Registry in Docker and configured Kibana for air-gapped mode so integrations could be installed without internet access.
+Delivered the Elastic Agent installer over a temporary Python web server, opening a firewall port for the download and closing it again afterwards.
+Fixed agent enrollment failures one at a time: a wrong-OS install command, a blocked port, and a certificate error (bypassed with --insecure, which is acceptable in a lab but not in production).
+Diagnosed an agent that went "Unhealthy" after adding Elastic Defend. I ruled out the firewall first, then found the Fleet output host set to 127.0.0.1 instead of the server's real IP.
+Confirmed end-to-end that Sysmon events were reaching the SIEM and could be searched.
+
+Skills shown: Elastic Stack deployment (Elasticsearch, Kibana, Fleet), air-gapped environment workarounds, firewall configuration, endpoint telemetry (Sysmon, Elastic Defend), and troubleshooting.
+
+*This TL;DR section was drafted with AI assistance and manually read-over and verified by me. The lab work, testing and findings are my own.*
 
 ## 『 1️⃣ Installing Elastic 』
 

@@ -1,19 +1,19 @@
 # Homelab Entry #4: Network Revamp & Router-on-a-Stick Architecture Implementation
 
-## 『 ⭐ Project overview 』
+## TL;DR
+My homelab ran on a single flat network, so I rebuilt it as a VLAN segmented, enterprise-style one. I used a Router-on-a-Stick design (a single OPNsense router trunked to a managed switch) with three VLANs: a DMZ for the vulnerable Juice Shop web app, a Security VLAN for the SIEM, and a simulated internet for the attacker VM. Then I tested the firewall with Nmap port scans from each VLAN.
 
-In order to secure my Homelab network and better match an enterprise network, I rearchitected my homelab network to move away from a single flat subnet and instead utilize a multi-VLAN Router-on-a-Stick configuration.
+What I found:
 
-### / 💠 Concepts Applied /
-- VLAN segmentation and subnets with 802.1Q VLAN Tagging
-- Firewall floating rules on OPNSense
-- Network setup for Virtual Machines (on Virtualbox)
-- Firewall testing and validation (via Nmap)
+My first DMZ firewall rule didn't work: Nmap showed the same ports open with it on or off. OPNsense rules only filter inbound traffic on an interface, so I needed a floating rule instead.
+Nmap hid the filtered ports rather than reporting them, so a clean-looking scan didn't prove anything on its own. I repeated the scans with the rule on and off to confirm the firewall was working.
+VirtualBox on Windows doesn't support VLAN tagging, so the planned trunk to the VMs wouldn't work. I solved it by using a second Ethernet port instead.
+My Security VM couldn't reach the management portals even though the rules looked right. The cause was from a mistake of having both Ethernet cables connected at once.
+Final result: the attacker VM can reach only port 80 on the Juice Shop, the Security VM can reach the Juice Shop and both management portals, and the Juice Shop can't initiate any outbound traffic.
 
-### / 🏆 Core Achievements /
-- Properly implemented the Router-on-a-Stick networking configuration on my Homelab
-- Designed and configured three VLANs (DMZ, Security, and a simulated WAN)
-- Verified success of firewall implementation via Nmap port scans
+Skills shown: VLAN segmentation (802.1Q), OPNsense firewall rules, managed switch configuration, network troubleshooting, and firewall validation with Nmap.
+
+*This TL;DR section was drafted with AI assistance and manually read-over and verified by me. The lab work, testing and findings are my own.*
 
 ## 『 1️⃣ Major Network Revamp and Router-on-a-Stick (RoaS) setup 』
 
