@@ -41,7 +41,7 @@ Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
 </a>
 
 <a href="03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md">
-  <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="100%">
+  <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
 My [**most thorough DFIR investigation**][vleak folder] of a simulated attack, complete with a [**final report**][vleak report] and full investigator notes. With **zero guided help** from the challenge's questions, I reconstructed a full incident timeline with only a KAPE triage and context.
@@ -56,7 +56,7 @@ The [**full PDF report**][vleak report] can be found in the Vantara Leak folder.
 [vleak report]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md/vantara-leak.pdf>
 
 <a href="01 🖥️ Homelab">
-  <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="100%">
+  <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
 </a>
 
 My homelab, powered by both physical hardware and virtual machines. Using OPNsense and a managed switch, this Router-on-a-Stick (RoaS) network manages three VLANs (DMZ, Security, Simulated Internet) using segmentation with 802.1Q tagging.
@@ -66,7 +66,7 @@ The homelab runs an intentionally vulnerable web server, where the bulk of opera
 [entry6]: <01 🖥️ Homelab/06 - Improving Endpoint Visibility.md>
 
 <a href="03 🔷 Defensive Security/20 - National Cyber League">
-  <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="100%">
+  <img src="misc (ignore)/images/03_heading_2_ncl.png" alt="National Cyber League" width="85%">
 </a>
 
 The National Cyber League (NCL) is a nationwide cybersecurity competition across the United States and Canada for high school and college students, with hands-on challenges in areas like forensics, log analysis, network traffic analysis, web exploitation, and cryptography. It runs semiannually, with thousands of students participating and competing each season.
@@ -86,7 +86,7 @@ You can view the [report of my 2026 Spring performance **here**][spring-2026-rep
 </a>
 
 <a href="03 🔷 Defensive Security/30 - Digital Forensics Investigations">
-  <img src="misc (ignore)/images/03_heading_2_dfirinvestigations.png" alt="dfir investigations" width="100%">
+  <img src="misc (ignore)/images/03_heading_2_dfirinvestigations.png" alt="dfir investigations" width="85%">
 </a>
 
 A collection of HackTheBox Sherlocks and TryHackMe defensive challenges for me to practice and hone my skills. Throughout these entries, I analyze and investigate Linux and Windows endpoints, reconstructing attacker timelines and malicious behavior.
