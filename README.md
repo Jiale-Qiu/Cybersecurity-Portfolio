@@ -40,7 +40,7 @@ Outside of Cybersecurity, I enjoy watching F1, sim racing, and playing Warframe.
   <img src="misc (ignore)/images/02_heading_1_featured_work.png" alt="Featured Work" width="100%">
 </a>
 
-<a href="03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md">
+<a href="03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR]">
   <img src="misc (ignore)/images/03_heading_2_vantara_leak.png" alt="Vantara Leak" width="85%">
 </a>
 
@@ -52,8 +52,8 @@ Throughout the investigation, I also uncovered a moment where the clock moved ba
 
 The [**full PDF report**][vleak report] can be found in the Vantara Leak folder.
 
-[vleak folder]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md>
-[vleak report]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR].md/vantara-leak.pdf>
+[vleak folder]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR]>
+[vleak report]: <03 🔷 Defensive Security/10 -⭐- THM Vantara Leak - [🔎DFIR]/vantara-leak.pdf>
 
 <a href="01 🖥️ Homelab">
   <img src="misc (ignore)/images/03_heading_2_homelab.png" alt="Homelab" width="85%">
