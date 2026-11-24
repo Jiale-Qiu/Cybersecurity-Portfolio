@@ -13,8 +13,6 @@ Confirmed end-to-end that Sysmon events were reaching the SIEM and could be sear
 
 Skills shown: Elastic Stack deployment (Elasticsearch, Kibana, Fleet), air-gapped environment workarounds, firewall configuration, endpoint telemetry (Sysmon, Elastic Defend), and troubleshooting.
 
-*This TL;DR section was drafted with AI assistance and manually read-over and verified by me. The lab work, testing and findings are my own.*
-
 ## 『 1️⃣ Installing Elastic 』
 
 I completely reinstall my installation of Ubuntu for the Security VM on my homelab to start from a fresh slate. I first download the Elastic PGP key and add the official repository list.

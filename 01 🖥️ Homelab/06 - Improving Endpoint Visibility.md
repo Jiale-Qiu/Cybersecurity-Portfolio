@@ -15,8 +15,6 @@ What's left: Web server POST bodies and the contents of network transfers are st
 
 Skills shown: Elastic Agent/Fleet administration, Sysmon and PowerShell logging configuration, ATT&CK-mapped detection testing, and troubleshooting.
 
-*This TL;DR section was drafted with AI assistance and manually read-over and verified by me. The lab work, testing and findings are my own.*
-
 ## Improving Endpoint Visibility
 
 Although Elastic *technically* works, there is still much work to be done. Sysmon isn't configured correctly, and there are lots of visibility gaps. Therefore, I will try to identify log sources and information that I will need to detect relevant attacks on my Juice Shop endpoint.

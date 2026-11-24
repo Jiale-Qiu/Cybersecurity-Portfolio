@@ -13,8 +13,6 @@ Final result: the attacker VM can reach only port 80 on the Juice Shop, the Secu
 
 Skills shown: VLAN segmentation (802.1Q), OPNsense firewall rules, managed switch configuration, network troubleshooting, and firewall validation with Nmap.
 
-*This TL;DR section was drafted with AI assistance and manually read-over and verified by me. The lab work, testing and findings are my own.*
-
 ## 『 1️⃣ Major Network Revamp and Router-on-a-Stick (RoaS) setup 』
 
 Coming back to this homelab, I realized I needed a serious revamp of the network. Primarily, I wanted to use VLANs to create a DMZ for the Juice Shop webapp.
